@@ -9,6 +9,10 @@ class BoardRepresentation:
 		self.black_left_rook_moved = False
 		self.black_right_rook_moved = False
 
+		# En passant tracking
+		self.en_passant_target = None  # Position where en passant capture can occur
+		self.en_passant_pawn = None    # Position of the pawn that can be captured
+
 		self.position_white_king = [60]
 		self.position_white_queen = [59]
 		self.position_white_rooks = [56, 63]
@@ -46,6 +50,11 @@ class BoardRepresentation:
 		piece = self.board[st_pos]
 		captured_piece = self.board[end_pos]
 
+		old_en_passant_target = self.en_passant_target
+		old_en_passant_pawn = self.en_passant_pawn
+		self.en_passant_target = None
+		self.en_passant_pawn = None
+
 		if piece == "K":
 			self.white_king_moved = True
 		elif piece == "k":
@@ -61,6 +70,30 @@ class BoardRepresentation:
 			elif st_pos == 7:
 				self.black_right_rook_moved = True
 
+		is_en_passant = False
+		if piece in 'Pp' and end_pos == old_en_passant_target:
+			is_en_passant = True
+			board_list = list(self.board)
+			board_list[old_en_passant_pawn] = '.'
+			self.board = ''.join(board_list)
+			
+			if piece == 'P': 
+				if old_en_passant_pawn in self.position_black_pawns:
+					self.position_black_pawns.remove(old_en_passant_pawn)
+			else:
+				if old_en_passant_pawn in self.position_white_pawns:
+					self.position_white_pawns.remove(old_en_passant_pawn)
+			
+			if old_en_passant_pawn not in self.position_empty:
+				self.position_empty.append(old_en_passant_pawn)
+
+		if piece == 'P' and st_pos // 8 == 6 and end_pos // 8 == 4:
+			self.en_passant_target = st_pos - 8 
+			self.en_passant_pawn = end_pos      
+		elif piece == 'p' and st_pos // 8 == 1 and end_pos // 8 == 3: 
+			self.en_passant_target = st_pos + 8
+			self.en_passant_pawn = end_pos
+
 		board_list = list(self.board)
 		board_list[end_pos] = piece
 		board_list[st_pos] = '.'
@@ -72,42 +105,43 @@ class BoardRepresentation:
 			if new not in positions:
 				positions.append(new)
 
-		if captured_piece == "K":
-			if end_pos in self.position_white_king:
-				self.position_white_king.remove(end_pos)
-		elif captured_piece == "Q":
-			if end_pos in self.position_white_queen:
-				self.position_white_queen.remove(end_pos)
-		elif captured_piece == "R":
-			if end_pos in self.position_white_rooks:
-				self.position_white_rooks.remove(end_pos)
-		elif captured_piece == "B":
-			if end_pos in self.position_white_bishops:
-				self.position_white_bishops.remove(end_pos)
-		elif captured_piece == "N":
-			if end_pos in self.position_white_knights:
-				self.position_white_knights.remove(end_pos)
-		elif captured_piece == "P":
-			if end_pos in self.position_white_pawns:
-				self.position_white_pawns.remove(end_pos)
-		elif captured_piece == "k":
-			if end_pos in self.position_black_king:
-				self.position_black_king.remove(end_pos)
-		elif captured_piece == "q":
-			if end_pos in self.position_black_queen:
-				self.position_black_queen.remove(end_pos)
-		elif captured_piece == "r":
-			if end_pos in self.position_black_rooks:
-				self.position_black_rooks.remove(end_pos)
-		elif captured_piece == "b":
-			if end_pos in self.position_black_bishops:
-				self.position_black_bishops.remove(end_pos)
-		elif captured_piece == "n":
-			if end_pos in self.position_black_knights:
-				self.position_black_knights.remove(end_pos)
-		elif captured_piece == "p":
-			if end_pos in self.position_black_pawns:
-				self.position_black_pawns.remove(end_pos)
+		if not is_en_passant and captured_piece != '.':
+			if captured_piece == "K":
+				if end_pos in self.position_white_king:
+					self.position_white_king.remove(end_pos)
+			elif captured_piece == "Q":
+				if end_pos in self.position_white_queen:
+					self.position_white_queen.remove(end_pos)
+			elif captured_piece == "R":
+				if end_pos in self.position_white_rooks:
+					self.position_white_rooks.remove(end_pos)
+			elif captured_piece == "B":
+				if end_pos in self.position_white_bishops:
+					self.position_white_bishops.remove(end_pos)
+			elif captured_piece == "N":
+				if end_pos in self.position_white_knights:
+					self.position_white_knights.remove(end_pos)
+			elif captured_piece == "P":
+				if end_pos in self.position_white_pawns:
+					self.position_white_pawns.remove(end_pos)
+			elif captured_piece == "k":
+				if end_pos in self.position_black_king:
+					self.position_black_king.remove(end_pos)
+			elif captured_piece == "q":
+				if end_pos in self.position_black_queen:
+					self.position_black_queen.remove(end_pos)
+			elif captured_piece == "r":
+				if end_pos in self.position_black_rooks:
+					self.position_black_rooks.remove(end_pos)
+			elif captured_piece == "b":
+				if end_pos in self.position_black_bishops:
+					self.position_black_bishops.remove(end_pos)
+			elif captured_piece == "n":
+				if end_pos in self.position_black_knights:
+					self.position_black_knights.remove(end_pos)
+			elif captured_piece == "p":
+				if end_pos in self.position_black_pawns:
+					self.position_black_pawns.remove(end_pos)
 
 		if piece == "K":
 			update_positions(self.position_white_king, st_pos, end_pos)
@@ -142,7 +176,6 @@ class BoardRepresentation:
 		self.white_turn = not self.white_turn
 
 	def make_promotion_move(self, st_pos: int, end_pos: int, promoted_piece: str):
-		"""Handle pawn promotion move"""
 		piece = self.board[st_pos]
 		captured_piece = self.board[end_pos]
 

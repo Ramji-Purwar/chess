@@ -307,6 +307,9 @@ class ChessUI:
 									self.promotion_to = pos
 									return  # Don't make the move yet, wait for promotion choice
 								
+								# Check if this is an en passant move
+								is_en_passant = PawnMoves.is_en_passant_move(self.board_state, self.selected_piece, pos, piece)
+								
 								# Check if this is a castling move
 								is_castling = False
 								
@@ -326,6 +329,8 @@ class ChessUI:
 										is_castling = True
 								
 								if not is_castling:
+									if is_en_passant:
+										print(f"En passant capture from {self.selected_piece} to {pos}")
 									self.board_state.make_move(self.selected_piece, pos)
 									
 							self.selected_piece = None

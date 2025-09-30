@@ -17,6 +17,12 @@ class PawnMoves:
         if(r > 0 and c < 7 and board.board[(r-1)*8 + (c+1)] in 'rnbqkp'):
             moves.append((r-1)*8 + (c+1))
         
+        if r == 3 and board.en_passant_target is not None:
+            current_pos = r * 8 + c
+            if (c > 0 and board.en_passant_target == current_pos - 8 - 1) or \
+               (c < 7 and board.en_passant_target == current_pos - 8 + 1):
+                moves.append(board.en_passant_target)
+        
         valid_moves = []
         for move in moves:
             clone_board = list(board.board)
@@ -26,6 +32,10 @@ class PawnMoves:
                 clone_board[move] = 'Q'
             else:
                 clone_board[move] = 'P'
+                
+            if move == board.en_passant_target and board.en_passant_pawn is not None:
+                clone_board[board.en_passant_pawn] = '.'
+                
             clone_board_str = ''.join(clone_board)
             if not Check_White.white_king_capturable(clone_board_str):
                 valid_moves.append(move)
@@ -44,6 +54,12 @@ class PawnMoves:
         if(r < 7 and c < 7 and board.board[(r+1)*8 + (c+1)] in 'RNBQKP'):
             moves.append((r+1)*8 + (c+1))
 
+        if r == 4 and board.en_passant_target is not None:
+            current_pos = r * 8 + c
+            if (c > 0 and board.en_passant_target == current_pos + 8 - 1) or \
+               (c < 7 and board.en_passant_target == current_pos + 8 + 1):
+                moves.append(board.en_passant_target)
+
         valid_moves = []
         for move in moves:
             clone_board = list(board.board)
@@ -53,6 +69,10 @@ class PawnMoves:
                 clone_board[move] = 'q'
             else:
                 clone_board[move] = 'p'
+                
+            if move == board.en_passant_target and board.en_passant_pawn is not None:
+                clone_board[board.en_passant_pawn] = '.'
+                
             clone_board_str = ''.join(clone_board)
             if not Check_Black.black_king_capturable(clone_board_str):
                 valid_moves.append(move)
@@ -68,6 +88,13 @@ class PawnMoves:
         elif piece == 'p':
             return end_row == 7
         return False
+
+    @staticmethod
+    def is_en_passant_move(board: BoardRepresentation, start_pos: int, end_pos: int, piece: str) -> bool:
+        """Check if a move is an en passant capture"""
+        return (piece in 'Pp' and 
+                end_pos == board.en_passant_target and 
+                board.en_passant_target is not None)
 
     @staticmethod
     def get_moves(board: BoardRepresentation, position: int) -> list:
