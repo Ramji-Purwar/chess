@@ -28,6 +28,21 @@ class KingMove:
 		return False
 
 	@staticmethod
+	def kings_adjacent(board_str: str, new_king_pos: int) -> bool:
+		if 'K' in board_str and 'k' in board_str:
+			white_king_pos = board_str.index('K')
+			black_king_pos = board_str.index('k')
+			
+			white_r, white_c = white_king_pos // 8, white_king_pos % 8
+			black_r, black_c = black_king_pos // 8, black_king_pos % 8
+			
+			row_diff = abs(white_r - black_r)
+			col_diff = abs(white_c - black_c)
+			
+			return (row_diff <= 1 and col_diff <= 1) and not (row_diff == 0 and col_diff == 0)
+		return False
+
+	@staticmethod
 	def can_castle_kingside(board: BoardRepresentation) -> bool:
 		if board.white_turn:
 			if board.white_king_moved or board.white_right_rook_moved:
@@ -177,6 +192,11 @@ class KingMove:
 				clone_board[r*8 + c] = '.'
 				clone_board[move] = 'K' if board.white_turn else 'k'
 				clone_board_str = ''.join(clone_board)
+				
+				# Check if kings would be adjacent
+				if KingMove.kings_adjacent(clone_board_str, move):
+					continue  # Skip this move - kings can't be adjacent
+				
 				if board.white_turn:
 					if not Check_White.white_king_capturable(clone_board_str):
 						valid_moves.append(move)
