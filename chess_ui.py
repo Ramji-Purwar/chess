@@ -1,10 +1,13 @@
 import pygame
 import os
+import threading
+import time
 from board import BoardRepresentation
 from valid_move import MoveValidator
 from check_detector import CheckDetector
 from mate_detector import MateDetector
 from moves.pawn import PawnMoves
+from best_move import BestMoveEngine
 
 class ChessUI:
 	def __init__(self):
@@ -29,6 +32,16 @@ class ChessUI:
 		self.promotion_from = None
 		self.promotion_to = None
 		self.promotion_pieces = ['Q', 'R', 'B', 'N']  # Queen, Rook, Bishop, Knight
+		
+		# Game mode selection
+		self.game_mode = None  # None means selecting mode, 'hvh', 'hvc_white', 'hvc_black'
+		self.show_mode_selection = True
+		self.computer_is_white = False
+		self.computer_is_black = False
+		self.ai_engine = BestMoveEngine(depth=3)
+		self.computer_thinking = False
+		self.computer_move_thread = None
+		
 		self.load_images()
 		
 		# Clear game.txt and save initial board state
@@ -52,6 +65,139 @@ class ChessUI:
 				except Exception as e:
 					print(f"Could not load {img_path}: {e}")
 
+
+	def draw_mode_selection(self):
+		"""Draw game mode selection screen"""
+		self.screen.fill((50, 50, 50))
+		
+		# Title
+		font_large = pygame.font.Font(None, 48)
+		title_text = "Choose Game Mode"
+		title_surface = font_large.render(title_text, True, (255, 255, 255))
+		title_rect = title_surface.get_rect()
+		title_rect.centerx = self.width // 2
+		title_rect.y = 80
+		self.screen.blit(title_surface, title_rect)
+		
+		# Mode options
+		font = pygame.font.Font(None, 32)
+		options = [
+			("1. Human vs Human", "hvh"),
+			("2. Human (White) vs Computer", "hvc_white"),
+			("3. Human (Black) vs Computer", "hvc_black")
+		]
+		
+		option_y = 180
+		for i, (text, mode) in enumerate(options):
+			text_surface = font.render(text, True, (255, 255, 255))
+			text_rect = text_surface.get_rect()
+			text_rect.centerx = self.width // 2
+			text_rect.y = option_y + i * 60
+			self.screen.blit(text_surface, text_rect)
+		
+		# Instructions
+		font_small = pygame.font.Font(None, 24)
+		instruction_text = "Press 1, 2, or 3 to select"
+		instruction_surface = font_small.render(instruction_text, True, (200, 200, 200))
+		instruction_rect = instruction_surface.get_rect()
+		instruction_rect.centerx = self.width // 2
+		instruction_rect.y = 380
+		self.screen.blit(instruction_surface, instruction_rect)
+
+	def set_game_mode(self, mode):
+		"""Set the game mode and configure computer players"""
+		self.game_mode = mode
+		self.show_mode_selection = False
+		
+		if mode == "hvh":
+			self.computer_is_white = False
+			self.computer_is_black = False
+		elif mode == "hvc_white":
+			self.computer_is_white = False
+			self.computer_is_black = True
+		elif mode == "hvc_black":
+			self.computer_is_white = True
+			self.computer_is_black = False
+		
+		# If computer plays white, make the first move
+		if self.computer_is_white and self.board_state.white_turn:
+			self.trigger_computer_move()
+
+	def trigger_computer_move(self):
+		"""Start computer move calculation in a separate thread"""
+		if self.computer_thinking or self.game_over or self.promotion_pending:
+			return
+		
+		# Check if it's the computer's turn
+		is_computer_turn = (self.board_state.white_turn and self.computer_is_white) or \
+						   (not self.board_state.white_turn and self.computer_is_black)
+		
+		if not is_computer_turn:
+			return
+		
+		self.computer_thinking = True
+		self.computer_move_thread = threading.Thread(target=self.calculate_computer_move)
+		self.computer_move_thread.daemon = True
+		self.computer_move_thread.start()
+
+	def calculate_computer_move(self):
+		"""Calculate and execute computer move (runs in separate thread)"""
+		try:
+			# Add a small delay for visual feedback
+			time.sleep(0.5)
+			
+			# Get the best move from AI engine
+			from_pos, to_pos, score = self.ai_engine.get_best_move(
+				self.board_state, self.board_state.white_turn
+			)
+			
+			if from_pos is not None and to_pos is not None:
+				# Execute the move on the main thread
+				self.execute_computer_move(from_pos, to_pos)
+			
+		except Exception as e:
+			print(f"Computer move calculation error: {e}")
+		finally:
+			self.computer_thinking = False
+
+	def execute_computer_move(self, from_pos, to_pos):
+		"""Execute the computer's move on the board"""
+		piece = self.board_state.board[from_pos]
+		
+		# Check if this is a promotion move (for computer pawns)
+		if PawnMoves.is_promotion_move(from_pos, to_pos, piece):
+			# Computer always promotes to queen for simplicity
+			promoted_piece = 'Q' if piece.isupper() else 'q'
+			self.board_state.make_promotion_move(from_pos, to_pos, promoted_piece)
+		
+		# Check if this is a castling move
+		elif piece == 'K' and from_pos == 60:  # White king from e1
+			if to_pos == 62:  # Kingside castling to g1
+				self.board_state.make_castling_move(60, 62, 63, 61)
+			elif to_pos == 58:  # Queenside castling to c1
+				self.board_state.make_castling_move(60, 58, 56, 59)
+			else:
+				self.board_state.make_move(from_pos, to_pos)
+		elif piece == 'k' and from_pos == 4:  # Black king from e8
+			if to_pos == 6:  # Kingside castling to g8
+				self.board_state.make_castling_move(4, 6, 7, 5)
+			elif to_pos == 2:  # Queenside castling to c8
+				self.board_state.make_castling_move(4, 2, 0, 3)
+			else:
+				self.board_state.make_move(from_pos, to_pos)
+		else:
+			# Regular move
+			self.board_state.make_move(from_pos, to_pos)
+		
+		# Save board state after computer move
+		self.save_board_state()
+		
+		# Check for game-ending conditions
+		self.game_status = self.mate_detector.get_game_status(self.board_state)
+		if self.game_status in ['checkmate', 'stalemate', 'repetition_draw', 'fifty_move_draw']:
+			self.game_over = True
+			if self.game_status == 'repetition_draw':
+				print("3-fold repetition detected! Game is a draw.")
 
 	def draw_board(self):
 		# Check if current player's king is in check
@@ -107,7 +253,11 @@ class ChessUI:
 		
 		if self.game_status == 'checkmate':
 			winner = "Black" if self.board_state.white_turn else "White"
-			turn_text = f"Checkmate! {winner} Wins!"
+			# Check if winner is human or computer
+			if (winner == "White" and self.computer_is_white) or (winner == "Black" and self.computer_is_black):
+				turn_text = f"Checkmate! Computer ({winner}) Wins!"
+			else:
+				turn_text = f"Checkmate! {winner} Wins!"
 			text_color = (255, 0, 0)
 			bg_color = (255, 255, 255)
 			if not self.game_over:  # Only set game_over and clear if not already done
@@ -135,13 +285,33 @@ class ChessUI:
 				self.game_over = True
 				self.clear_game_file()  # Clear game.txt when game ends
 		elif self.game_status == 'check':
-			player = "White" if self.board_state.white_turn else "Black"
-			turn_text = f"Check! {player}'s Turn"
+			current_player = "White" if self.board_state.white_turn else "Black"
+			is_computer = (self.board_state.white_turn and self.computer_is_white) or \
+						  (not self.board_state.white_turn and self.computer_is_black)
+			
+			if self.computer_thinking:
+				turn_text = f"Check! Computer ({current_player}) Thinking..."
+			elif is_computer:
+				turn_text = f"Check! Computer's ({current_player}) Turn"
+			else:
+				turn_text = f"Check! {current_player}'s Turn"
 			text_color = (255, 0, 0)
 			bg_color = (255, 255, 255)
 		else:
-			turn_text = "White's Turn" if self.board_state.white_turn else "Black's Turn"
-			text_color = (255, 255, 255) if self.board_state.white_turn else (0, 0, 0)
+			current_player = "White" if self.board_state.white_turn else "Black"
+			is_computer = (self.board_state.white_turn and self.computer_is_white) or \
+						  (not self.board_state.white_turn and self.computer_is_black)
+			
+			if self.computer_thinking:
+				turn_text = f"Computer ({current_player}) Thinking..."
+				text_color = (0, 128, 255)  # Blue for thinking
+			elif is_computer:
+				turn_text = f"Computer's ({current_player}) Turn"
+				text_color = (255, 255, 255) if self.board_state.white_turn else (0, 0, 0)
+			else:
+				turn_text = f"{current_player}'s Turn"
+				text_color = (255, 255, 255) if self.board_state.white_turn else (0, 0, 0)
+			
 			bg_color = (0, 0, 0) if self.board_state.white_turn else (255, 255, 255)
 		
 		text_surface = font.render(turn_text, True, text_color, bg_color)
@@ -275,6 +445,10 @@ class ChessUI:
 				self.selected_piece = None
 				self.valid_moves = []
 				
+				# Trigger computer move after promotion if game isn't over
+				if not self.game_over:
+					self.trigger_computer_move()
+				
 				return True
 		
 		return False
@@ -305,6 +479,11 @@ class ChessUI:
 		self.promotion_pending = False
 		self.promotion_from = None
 		self.promotion_to = None
+		self.computer_thinking = False
+		self.show_mode_selection = True
+		self.game_mode = None
+		self.computer_is_white = False
+		self.computer_is_black = False
 		self.clear_game_file()  # Clear game.txt when restarting
 		self.save_board_state()  # Save the initial position
 
@@ -323,13 +502,32 @@ class ChessUI:
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
 				self.running = False
+			elif event.type == pygame.KEYDOWN:
+				# Handle game mode selection
+				if self.show_mode_selection:
+					if event.key == pygame.K_1:
+						self.set_game_mode("hvh")
+					elif event.key == pygame.K_2:
+						self.set_game_mode("hvc_white")
+					elif event.key == pygame.K_3:
+						self.set_game_mode("hvc_black")
+				elif event.key == pygame.K_r and self.game_over:  # Press 'R' to restart when game is over
+					self.restart_game()
 			elif event.type == pygame.MOUSEBUTTONDOWN:
 				if event.button == 1:  # Left click
+					# Skip mouse handling if in mode selection
+					if self.show_mode_selection:
+						return
+					
 					mouse_x, mouse_y = event.pos
 					
 					# Check if clicking on promotion dialog
 					if self.promotion_pending:
 						self.handle_promotion_click(mouse_x, mouse_y)
+						return
+					
+					# Skip mouse handling if computer is thinking
+					if self.computer_thinking:
 						return
 					
 					# Only handle board clicks if game is not over
@@ -339,6 +537,13 @@ class ChessUI:
 						
 						pos = row * 8 + col
 						piece = self.board_state.board[pos]
+
+						# Check if it's a human player's turn
+						is_human_turn = (self.board_state.white_turn and not self.computer_is_white) or \
+									   (not self.board_state.white_turn and not self.computer_is_black)
+						
+						if not is_human_turn:
+							return  # It's computer's turn, ignore clicks
 
 						# Only allow selecting pieces that belong to the current player
 						if piece != '.' and self.is_current_player_piece(piece):
@@ -406,20 +611,31 @@ class ChessUI:
 									if self.game_status == 'repetition_draw':
 										print("3-fold repetition detected! Game is a draw.")
 									# Don't clear file here - let draw_turn_indicator handle it
-									
-							self.selected_piece = None
-							self.valid_moves = []
-			elif event.type == pygame.KEYDOWN:
-				if event.key == pygame.K_r and self.game_over:  # Press 'R' to restart when game is over
-					self.restart_game()
+								
+								# Clear selection after human move
+								self.selected_piece = None
+								self.valid_moves = []
+								
+								# Trigger computer move after human move
+								if not self.game_over:
+									self.trigger_computer_move()
+								
+							else:
+								self.selected_piece = None
+								self.valid_moves = []
 
 
 	def run(self):
 		while self.running:
 			self.handle_events()
 			self.screen.fill((0, 0, 0))
-			self.draw_board()
-			self.draw_promotion_dialog()  # Draw promotion dialog on top
+			
+			if self.show_mode_selection:
+				self.draw_mode_selection()
+			else:
+				self.draw_board()
+				self.draw_promotion_dialog()  # Draw promotion dialog on top
+			
 			pygame.display.flip()
 			self.clock.tick(60)
 		
