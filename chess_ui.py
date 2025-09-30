@@ -294,42 +294,42 @@ class ChessUI:
 							self.selected_piece = pos
 							self.valid_moves = MoveValidator.get_valid_moves(self.board_state, pos, piece)
 
-					elif self.selected_piece is not None:
-						if pos in self.valid_moves:
-							print(f"Moving piece from {self.selected_piece} to {pos}")
-							
-							piece = self.board_state.board[self.selected_piece]
-							
-							# Check if this is a promotion move
-							if PawnMoves.is_promotion_move(self.selected_piece, pos, piece):
-								self.promotion_pending = True
-								self.promotion_from = self.selected_piece
-								self.promotion_to = pos
-								return  # Don't make the move yet, wait for promotion choice
-							
-							# Check if this is a castling move
-							is_castling = False
-							
-							if piece == 'K' and self.selected_piece == 60:  # White king from e1
-								if pos == 62:  # Kingside castling to g1
-									self.board_state.make_castling_move(60, 62, 63, 61)
-									is_castling = True
-								elif pos == 58:  # Queenside castling to c1
-									self.board_state.make_castling_move(60, 58, 56, 59)
-									is_castling = True
-							elif piece == 'k' and self.selected_piece == 4:  # Black king from e8
-								if pos == 6:  # Kingside castling to g8
-									self.board_state.make_castling_move(4, 6, 7, 5)
-									is_castling = True
-								elif pos == 2:  # Queenside castling to c8
-									self.board_state.make_castling_move(4, 2, 0, 3)
-									is_castling = True
-							
-							if not is_castling:
-								self.board_state.make_move(self.selected_piece, pos)
+						elif self.selected_piece is not None:
+							if pos in self.valid_moves:
+								print(f"Moving piece from {self.selected_piece} to {pos}")
 								
-						self.selected_piece = None
-						self.valid_moves = []
+								piece = self.board_state.board[self.selected_piece]
+								
+								# Check if this is a promotion move
+								if PawnMoves.is_promotion_move(self.selected_piece, pos, piece):
+									self.promotion_pending = True
+									self.promotion_from = self.selected_piece
+									self.promotion_to = pos
+									return  # Don't make the move yet, wait for promotion choice
+								
+								# Check if this is a castling move
+								is_castling = False
+								
+								if piece == 'K' and self.selected_piece == 60:  # White king from e1
+									if pos == 62:  # Kingside castling to g1
+										self.board_state.make_castling_move(60, 62, 63, 61)
+										is_castling = True
+									elif pos == 58:  # Queenside castling to c1
+										self.board_state.make_castling_move(60, 58, 56, 59)
+										is_castling = True
+								elif piece == 'k' and self.selected_piece == 4:  # Black king from e8
+									if pos == 6:  # Kingside castling to g8
+										self.board_state.make_castling_move(4, 6, 7, 5)
+										is_castling = True
+									elif pos == 2:  # Queenside castling to c8
+										self.board_state.make_castling_move(4, 2, 0, 3)
+										is_castling = True
+								
+								if not is_castling:
+									self.board_state.make_move(self.selected_piece, pos)
+									
+							self.selected_piece = None
+							self.valid_moves = []
 			elif event.type == pygame.KEYDOWN:
 				if event.key == pygame.K_r and self.game_over:  # Press 'R' to restart when game is over
 					self.restart_game()

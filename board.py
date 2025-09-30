@@ -146,7 +146,6 @@ class BoardRepresentation:
 		piece = self.board[st_pos]
 		captured_piece = self.board[end_pos]
 
-		# Update board with promoted piece
 		board_list = list(self.board)
 		board_list[end_pos] = promoted_piece
 		board_list[st_pos] = '.'
@@ -158,7 +157,6 @@ class BoardRepresentation:
 			if new not in positions:
 				positions.append(new)
 
-		# Remove captured piece from position lists
 		if captured_piece == "K":
 			if end_pos in self.position_white_king:
 				self.position_white_king.remove(end_pos)
@@ -196,7 +194,6 @@ class BoardRepresentation:
 			if end_pos in self.position_black_pawns:
 				self.position_black_pawns.remove(end_pos)
 
-		# Remove pawn from original position
 		if piece == "P":
 			if st_pos in self.position_white_pawns:
 				self.position_white_pawns.remove(st_pos)
@@ -204,7 +201,6 @@ class BoardRepresentation:
 			if st_pos in self.position_black_pawns:
 				self.position_black_pawns.remove(st_pos)
 
-		# Add promoted piece to appropriate position list
 		if promoted_piece == "Q":
 			if end_pos not in self.position_white_queen:
 				self.position_white_queen.append(end_pos)
@@ -230,7 +226,6 @@ class BoardRepresentation:
 			if end_pos not in self.position_black_knights:
 				self.position_black_knights.append(end_pos)
 
-		# Update empty positions
 		if st_pos not in self.position_empty:
 			self.position_empty.append(st_pos)
 		if end_pos in self.position_empty:
