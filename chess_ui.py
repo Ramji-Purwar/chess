@@ -31,7 +31,8 @@ class ChessUI:
 		self.promotion_pieces = ['Q', 'R', 'B', 'N']  # Queen, Rook, Bishop, Knight
 		self.load_images()
 		
-		# Save initial board state
+		# Clear game.txt and save initial board state
+		self.clear_game_file()
 		self.save_board_state()
 
 	def load_images(self):
