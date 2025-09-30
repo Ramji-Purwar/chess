@@ -174,7 +174,29 @@ class ChessUI:
 					elif self.selected_piece is not None:
 						if pos in self.valid_moves:
 							print(f"Moving piece from {self.selected_piece} to {pos}")
-							self.board_state.make_move(self.selected_piece, pos)
+							
+							# Check if this is a castling move
+							piece = self.board_state.board[self.selected_piece]
+							is_castling = False
+							
+							if piece == 'K' and self.selected_piece == 60:  # White king from e1
+								if pos == 62:  # Kingside castling to g1
+									self.board_state.make_castling_move(60, 62, 63, 61)
+									is_castling = True
+								elif pos == 58:  # Queenside castling to c1
+									self.board_state.make_castling_move(60, 58, 56, 59)
+									is_castling = True
+							elif piece == 'k' and self.selected_piece == 4:  # Black king from e8
+								if pos == 6:  # Kingside castling to g8
+									self.board_state.make_castling_move(4, 6, 7, 5)
+									is_castling = True
+								elif pos == 2:  # Queenside castling to c8
+									self.board_state.make_castling_move(4, 2, 0, 3)
+									is_castling = True
+							
+							if not is_castling:
+								self.board_state.make_move(self.selected_piece, pos)
+								
 						self.selected_piece = None
 						self.valid_moves = []
 			elif event.type == pygame.KEYDOWN:

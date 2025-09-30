@@ -2,6 +2,12 @@ class BoardRepresentation:
 	def __init__(self):
 		self.board = "rnbqkbnrpppppppp................................PPPPPPPPRNBQKBNR"
 		self.white_turn = True
+		self.white_king_moved = False
+		self.black_king_moved = False
+		self.white_left_rook_moved = False
+		self.white_right_rook_moved = False
+		self.black_left_rook_moved = False
+		self.black_right_rook_moved = False
 
 		self.position_white_king = [60]
 		self.position_white_queen = [59]
@@ -39,6 +45,21 @@ class BoardRepresentation:
 
 		piece = self.board[st_pos]
 		captured_piece = self.board[end_pos]
+
+		if piece == "K":
+			self.white_king_moved = True
+		elif piece == "k":
+			self.black_king_moved = True
+		elif piece == "R":
+			if st_pos == 56:
+				self.white_left_rook_moved = True
+			elif st_pos == 63:
+				self.white_right_rook_moved = True
+		elif piece == "r":
+			if st_pos == 0:
+				self.black_left_rook_moved = True
+			elif st_pos == 7:
+				self.black_right_rook_moved = True
 
 		board_list = list(self.board)
 		board_list[end_pos] = piece
@@ -118,4 +139,54 @@ class BoardRepresentation:
 		if end_pos in self.position_empty:
 			self.position_empty.remove(end_pos)
 		
+		self.white_turn = not self.white_turn
+
+	def make_castling_move(self, king_start: int, king_end: int, rook_start: int, rook_end: int):
+		board_list = list(self.board)
+		
+		if self.white_turn:
+			board_list[king_end] = 'K'
+			board_list[king_start] = '.'
+			
+			board_list[rook_end] = 'R'
+			board_list[rook_start] = '.'
+			
+			self.position_white_king = [king_end]
+			if rook_start in self.position_white_rooks:
+				self.position_white_rooks.remove(rook_start)
+			self.position_white_rooks.append(rook_end)
+			
+			self.white_king_moved = True
+			if rook_start == 56:
+				self.white_left_rook_moved = True
+			elif rook_start == 63:
+				self.white_right_rook_moved = True
+		else:
+			board_list[king_end] = 'k'
+			board_list[king_start] = '.'
+			
+			board_list[rook_end] = 'r'
+			board_list[rook_start] = '.'
+			
+			self.position_black_king = [king_end]
+			if rook_start in self.position_black_rooks:
+				self.position_black_rooks.remove(rook_start)
+			self.position_black_rooks.append(rook_end)
+			
+			self.black_king_moved = True
+			if rook_start == 0:
+				self.black_left_rook_moved = True
+			elif rook_start == 7:
+				self.black_right_rook_moved = True
+		
+		if king_start not in self.position_empty:
+			self.position_empty.append(king_start)
+		if rook_start not in self.position_empty:
+			self.position_empty.append(rook_start)
+		if king_end in self.position_empty:
+			self.position_empty.remove(king_end)
+		if rook_end in self.position_empty:
+			self.position_empty.remove(rook_end)
+		
+		self.board = ''.join(board_list)
 		self.white_turn = not self.white_turn
