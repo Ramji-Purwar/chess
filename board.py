@@ -141,6 +141,103 @@ class BoardRepresentation:
 		
 		self.white_turn = not self.white_turn
 
+	def make_promotion_move(self, st_pos: int, end_pos: int, promoted_piece: str):
+		"""Handle pawn promotion move"""
+		piece = self.board[st_pos]
+		captured_piece = self.board[end_pos]
+
+		# Update board with promoted piece
+		board_list = list(self.board)
+		board_list[end_pos] = promoted_piece
+		board_list[st_pos] = '.'
+		self.board = ''.join(board_list)
+
+		def update_positions(positions, old, new):
+			if old in positions:
+				positions.remove(old)
+			if new not in positions:
+				positions.append(new)
+
+		# Remove captured piece from position lists
+		if captured_piece == "K":
+			if end_pos in self.position_white_king:
+				self.position_white_king.remove(end_pos)
+		elif captured_piece == "Q":
+			if end_pos in self.position_white_queen:
+				self.position_white_queen.remove(end_pos)
+		elif captured_piece == "R":
+			if end_pos in self.position_white_rooks:
+				self.position_white_rooks.remove(end_pos)
+		elif captured_piece == "B":
+			if end_pos in self.position_white_bishops:
+				self.position_white_bishops.remove(end_pos)
+		elif captured_piece == "N":
+			if end_pos in self.position_white_knights:
+				self.position_white_knights.remove(end_pos)
+		elif captured_piece == "P":
+			if end_pos in self.position_white_pawns:
+				self.position_white_pawns.remove(end_pos)
+		elif captured_piece == "k":
+			if end_pos in self.position_black_king:
+				self.position_black_king.remove(end_pos)
+		elif captured_piece == "q":
+			if end_pos in self.position_black_queen:
+				self.position_black_queen.remove(end_pos)
+		elif captured_piece == "r":
+			if end_pos in self.position_black_rooks:
+				self.position_black_rooks.remove(end_pos)
+		elif captured_piece == "b":
+			if end_pos in self.position_black_bishops:
+				self.position_black_bishops.remove(end_pos)
+		elif captured_piece == "n":
+			if end_pos in self.position_black_knights:
+				self.position_black_knights.remove(end_pos)
+		elif captured_piece == "p":
+			if end_pos in self.position_black_pawns:
+				self.position_black_pawns.remove(end_pos)
+
+		# Remove pawn from original position
+		if piece == "P":
+			if st_pos in self.position_white_pawns:
+				self.position_white_pawns.remove(st_pos)
+		elif piece == "p":
+			if st_pos in self.position_black_pawns:
+				self.position_black_pawns.remove(st_pos)
+
+		# Add promoted piece to appropriate position list
+		if promoted_piece == "Q":
+			if end_pos not in self.position_white_queen:
+				self.position_white_queen.append(end_pos)
+		elif promoted_piece == "R":
+			if end_pos not in self.position_white_rooks:
+				self.position_white_rooks.append(end_pos)
+		elif promoted_piece == "B":
+			if end_pos not in self.position_white_bishops:
+				self.position_white_bishops.append(end_pos)
+		elif promoted_piece == "N":
+			if end_pos not in self.position_white_knights:
+				self.position_white_knights.append(end_pos)
+		elif promoted_piece == "q":
+			if end_pos not in self.position_black_queen:
+				self.position_black_queen.append(end_pos)
+		elif promoted_piece == "r":
+			if end_pos not in self.position_black_rooks:
+				self.position_black_rooks.append(end_pos)
+		elif promoted_piece == "b":
+			if end_pos not in self.position_black_bishops:
+				self.position_black_bishops.append(end_pos)
+		elif promoted_piece == "n":
+			if end_pos not in self.position_black_knights:
+				self.position_black_knights.append(end_pos)
+
+		# Update empty positions
+		if st_pos not in self.position_empty:
+			self.position_empty.append(st_pos)
+		if end_pos in self.position_empty:
+			self.position_empty.remove(end_pos)
+		
+		self.white_turn = not self.white_turn
+
 	def make_castling_move(self, king_start: int, king_end: int, rook_start: int, rook_end: int):
 		board_list = list(self.board)
 		
