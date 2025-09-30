@@ -193,9 +193,8 @@ class KingMove:
 				clone_board[move] = 'K' if board.white_turn else 'k'
 				clone_board_str = ''.join(clone_board)
 				
-				# Check if kings would be adjacent
 				if KingMove.kings_adjacent(clone_board_str, move):
-					continue  # Skip this move - kings can't be adjacent
+					continue
 				
 				if board.white_turn:
 					if not Check_White.white_king_capturable(clone_board_str):
