@@ -30,6 +30,9 @@ class ChessUI:
 		self.promotion_to = None
 		self.promotion_pieces = ['Q', 'R', 'B', 'N']  # Queen, Rook, Bishop, Knight
 		self.load_images()
+		
+		# Save initial board state
+		self.save_board_state()
 
 	def load_images(self):
 		colors = ["dark", "light"]
@@ -107,11 +110,13 @@ class ChessUI:
 			text_color = (255, 0, 0)
 			bg_color = (255, 255, 255)
 			self.game_over = True
+			self.clear_game_file()  # Clear game.txt when game ends
 		elif self.game_status == 'stalemate':
 			turn_text = "Stalemate! Draw!"
 			text_color = (128, 128, 128)
 			bg_color = (255, 255, 255)
 			self.game_over = True
+			self.clear_game_file()  # Clear game.txt when game ends
 		elif self.game_status == 'check':
 			player = "White" if self.board_state.white_turn else "Black"
 			turn_text = f"Check! {player}'s Turn"
@@ -235,6 +240,9 @@ class ChessUI:
 				promoted_piece = piece_type if is_white else piece_type.lower()
 				self.board_state.make_promotion_move(self.promotion_from, self.promotion_to, promoted_piece)
 				
+				# Save board state after promotion
+				self.save_board_state()
+				
 				# Reset promotion state
 				self.promotion_pending = False
 				self.promotion_from = None
@@ -246,6 +254,22 @@ class ChessUI:
 		
 		return False
 
+	def save_board_state(self):
+		"""Append the current board state to game.txt"""
+		try:
+			with open("game.txt", "a") as f:
+				f.write(f"{self.board_state.board}\n")
+		except Exception as e:
+			print(f"Error saving board state: {e}")
+
+	def clear_game_file(self):
+		"""Clear the game.txt file when game is complete"""
+		try:
+			with open("game.txt", "w") as f:
+				f.write("")  # Clear the file
+		except Exception as e:
+			print(f"Error clearing game file: {e}")
+
 	def restart_game(self):
 		"""Restart the game to initial state"""
 		self.board_state = BoardRepresentation()
@@ -256,6 +280,8 @@ class ChessUI:
 		self.promotion_pending = False
 		self.promotion_from = None
 		self.promotion_to = None
+		self.clear_game_file()  # Clear game.txt when restarting
+		self.save_board_state()  # Save the initial position
 
 	def get_image_key(self, piece):
 		piece_map = self.board_state.piece_map
@@ -328,10 +354,17 @@ class ChessUI:
 										self.board_state.make_castling_move(4, 2, 0, 3)
 										is_castling = True
 								
+								# Save board state after castling
+								if is_castling:
+									self.save_board_state()
+								
 								if not is_castling:
 									if is_en_passant:
 										print(f"En passant capture from {self.selected_piece} to {pos}")
 									self.board_state.make_move(self.selected_piece, pos)
+								
+								# Save board state after move
+								self.save_board_state()
 									
 							self.selected_piece = None
 							self.valid_moves = []
