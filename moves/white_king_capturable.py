@@ -3,17 +3,16 @@ class Check_White:
 
     @staticmethod
     def capture_diagonally(board : str, R : int, C : int):
-        # Check all four diagonal directions
         directions = [(-1, -1), (-1, 1), (1, -1), (1, 1)]
         
         for dr, dc in directions:
-            r, c = R + dr, C + dc  # Start from next square, not king position
+            r, c = R + dr, C + dc 
             while 0 <= r < 8 and 0 <= c < 8:
                 piece = board[r * 8 + c]
-                if piece != '.':  # Found a piece
-                    if piece in 'bq':  # Black bishop or queen can attack diagonally
+                if piece != '.':
+                    if piece in 'bq':
                         return True
-                    break  # Any other piece blocks the path
+                    break
                 r += dr
                 c += dc
         
@@ -22,17 +21,16 @@ class Check_White:
 
     @staticmethod
     def capture_horizontally(board : str, R : int, C : int):
-        # Check left and right
         directions = [(0, -1), (0, 1)]
         
         for dr, dc in directions:
-            r, c = R + dr, C + dc  # Start from next square
+            r, c = R + dr, C + dc  
             while 0 <= r < 8 and 0 <= c < 8:
                 piece = board[r * 8 + c]
-                if piece != '.':  # Found a piece
-                    if piece in 'rq':  # Black rook or queen can attack horizontally
+                if piece != '.': 
+                    if piece in 'rq': 
                         return True
-                    break  # Any other piece blocks the path
+                    break
                 r += dr
                 c += dc
 
@@ -40,17 +38,16 @@ class Check_White:
 
     @staticmethod
     def capture_vertically(board : str, R : int, C : int):
-        # Check up and down
         directions = [(-1, 0), (1, 0)]
         
         for dr, dc in directions:
-            r, c = R + dr, C + dc  # Start from next square
+            r, c = R + dr, C + dc 
             while 0 <= r < 8 and 0 <= c < 8:
                 piece = board[r * 8 + c]
-                if piece != '.':  # Found a piece
-                    if piece in 'rq':  # Black rook or queen can attack vertically
+                if piece != '.': 
+                    if piece in 'rq':
                         return True
-                    break  # Any other piece blocks the path
+                    break
                 r += dr
                 c += dc
 
@@ -71,6 +68,19 @@ class Check_White:
         return False
     
     @staticmethod
+    def capture_by_pawn(board: str, R: int, C: int):
+        pawn_attack_positions = [
+            (R - 1, C - 1),
+            (R - 1, C + 1) 
+        ]
+        
+        for r, c in pawn_attack_positions:
+            if 0 <= r < 8 and 0 <= c < 8:
+                if board[r * 8 + c] == 'p': 
+                    return True
+        return False
+
+    @staticmethod
     def white_king_capturable(board):
         king_pos = board.index('K')
         r = king_pos // 8
@@ -82,6 +92,8 @@ class Check_White:
         if Check_White.capture_vertically(board, r, c):
             return True
         if Check_White.capture_by_knight(board, r, c):
+            return True
+        if Check_White.capture_by_pawn(board, r, c):
             return True
         
         return False
