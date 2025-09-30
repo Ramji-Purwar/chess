@@ -1,0 +1,8 @@
+- main.py  -> runs the game
+- board.py -> stores the board and position of individual piece
+- chess_ui.py -> ui and handles user moves and calls best_move.py
+- best_move.py -> finds out best move and uses file moves.py and eval.py
+    - eval.py -> returns integer of evaluation of currnet positon
+    - valide_moves -> returns list of valid moves
+    - best moves uses these two files for finding out the best move in current posision
+- game.txt -> stores the game playes so far in the notation used in chess world and also in the string form
