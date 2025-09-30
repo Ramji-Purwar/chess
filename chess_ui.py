@@ -102,22 +102,31 @@ class ChessUI:
 		"""Draw a text indicator showing whose turn it is and game status"""
 		font = pygame.font.Font(None, 36)
 		
-		# Check game status
-		self.game_status = self.mate_detector.get_game_status(self.board_state)
+		if not self.game_over:
+			self.game_status = self.mate_detector.get_game_status(self.board_state)
 		
 		if self.game_status == 'checkmate':
 			winner = "Black" if self.board_state.white_turn else "White"
 			turn_text = f"Checkmate! {winner} Wins!"
 			text_color = (255, 0, 0)
 			bg_color = (255, 255, 255)
-			self.game_over = True
-			self.clear_game_file()  # Clear game.txt when game ends
+			if not self.game_over:  # Only set game_over and clear if not already done
+				self.game_over = True
+				self.clear_game_file()  # Clear game.txt when game ends
 		elif self.game_status == 'stalemate':
 			turn_text = "Stalemate! Draw!"
 			text_color = (128, 128, 128)
 			bg_color = (255, 255, 255)
-			self.game_over = True
-			self.clear_game_file()  # Clear game.txt when game ends
+			if not self.game_over:  # Only set game_over and clear if not already done
+				self.game_over = True
+				self.clear_game_file()  # Clear game.txt when game ends
+		elif self.game_status == 'repetition_draw':
+			turn_text = "Draw by 3-fold repetition!"
+			text_color = (0, 0, 255)  # Blue for repetition draw
+			bg_color = (255, 255, 255)
+			if not self.game_over:  # Only set game_over and clear if not already done
+				self.game_over = True
+				self.clear_game_file()  # Clear game.txt when game ends
 		elif self.game_status == 'check':
 			player = "White" if self.board_state.white_turn else "Black"
 			turn_text = f"Check! {player}'s Turn"
@@ -244,6 +253,14 @@ class ChessUI:
 				# Save board state after promotion
 				self.save_board_state()
 				
+				# Check for game-ending conditions immediately after promotion
+				self.game_status = self.mate_detector.get_game_status(self.board_state)
+				if self.game_status in ['checkmate', 'stalemate', 'repetition_draw']:
+					self.game_over = True
+					if self.game_status == 'repetition_draw':
+						print("3-fold repetition detected! Game is a draw.")
+					# Don't clear file here - let draw_turn_indicator handle it
+				
 				# Reset promotion state
 				self.promotion_pending = False
 				self.promotion_from = None
@@ -358,6 +375,14 @@ class ChessUI:
 								# Save board state after castling
 								if is_castling:
 									self.save_board_state()
+									
+									# Check for game-ending conditions immediately after castling
+									self.game_status = self.mate_detector.get_game_status(self.board_state)
+									if self.game_status in ['checkmate', 'stalemate', 'repetition_draw']:
+										self.game_over = True
+										if self.game_status == 'repetition_draw':
+											print("3-fold repetition detected! Game is a draw.")
+										# Don't clear file here - let draw_turn_indicator handle it
 								
 								if not is_castling:
 									if is_en_passant:
@@ -366,6 +391,14 @@ class ChessUI:
 								
 								# Save board state after move
 								self.save_board_state()
+								
+								# Check for game-ending conditions immediately after move
+								self.game_status = self.mate_detector.get_game_status(self.board_state)
+								if self.game_status in ['checkmate', 'stalemate', 'repetition_draw']:
+									self.game_over = True
+									if self.game_status == 'repetition_draw':
+										print("3-fold repetition detected! Game is a draw.")
+									# Don't clear file here - let draw_turn_indicator handle it
 									
 							self.selected_piece = None
 							self.valid_moves = []

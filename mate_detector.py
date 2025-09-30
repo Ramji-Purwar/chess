@@ -1,6 +1,7 @@
 from board import BoardRepresentation
 from check_detector import CheckDetector
 from valid_move import MoveValidator
+from three_repetition import ThreeFoldRepetition
 import copy
 
 class MateDetector:
@@ -56,7 +57,9 @@ class MateDetector:
     
     @staticmethod
     def get_game_status(board: BoardRepresentation) -> str:
-        if MateDetector.is_checkmate(board):
+        if ThreeFoldRepetition.check_repetition():
+            return 'repetition_draw'
+        elif MateDetector.is_checkmate(board):
             return 'checkmate'
         elif MateDetector.is_stalemate(board):
             return 'stalemate'
