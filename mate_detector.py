@@ -2,6 +2,7 @@ from board import BoardRepresentation
 from check_detector import CheckDetector
 from valid_move import MoveValidator
 from three_repetition import ThreeFoldRepetition
+from fifty_move_check import FiftyMoveRule
 import copy
 
 class MateDetector:
@@ -59,6 +60,8 @@ class MateDetector:
     def get_game_status(board: BoardRepresentation) -> str:
         if ThreeFoldRepetition.check_repetition():
             return 'repetition_draw'
+        elif FiftyMoveRule.check_50_move_rule():
+            return 'fifty_move_draw'
         elif MateDetector.is_checkmate(board):
             return 'checkmate'
         elif MateDetector.is_stalemate(board):

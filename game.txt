@@ -1,9 +1,0 @@
-rnbqkbnrpppppppp................................PPPPPPPPRNBQKBNR
-rnbqkbnrpppppppp..........................N.....PPPPPPPPR.BQKBNR
-r.bqkbnrpppppppp..n.......................N.....PPPPPPPPR.BQKBNR
-r.bqkbnrpppppppp..n.............................PPPPPPPPRNBQKBNR
-rnbqkbnrpppppppp................................PPPPPPPPRNBQKBNR
-rnbqkbnrpppppppp..........................N.....PPPPPPPPR.BQKBNR
-r.bqkbnrpppppppp..n.......................N.....PPPPPPPPR.BQKBNR
-r.bqkbnrpppppppp..n.............................PPPPPPPPRNBQKBNR
-rnbqkbnrpppppppp................................PPPPPPPPRNBQKBNR

@@ -127,6 +127,13 @@ class ChessUI:
 			if not self.game_over:  # Only set game_over and clear if not already done
 				self.game_over = True
 				self.clear_game_file()  # Clear game.txt when game ends
+		elif self.game_status == 'fifty_move_draw':
+			turn_text = "Draw by 50-move rule!"
+			text_color = (128, 0, 128)  # Purple for 50-move draw
+			bg_color = (255, 255, 255)
+			if not self.game_over:  # Only set game_over and clear if not already done
+				self.game_over = True
+				self.clear_game_file()  # Clear game.txt when game ends
 		elif self.game_status == 'check':
 			player = "White" if self.board_state.white_turn else "Black"
 			turn_text = f"Check! {player}'s Turn"
