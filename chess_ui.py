@@ -3,6 +3,7 @@ import os
 from board import BoardRepresentation
 from valid_move import MoveValidator
 from check_detector import CheckDetector
+from mate_detector import MateDetector
 
 class ChessUI:
 	def __init__(self):
@@ -16,10 +17,13 @@ class ChessUI:
 		self.images = {}
 		self.board_state = BoardRepresentation()
 		self.check_detector = CheckDetector()
+		self.mate_detector = MateDetector()
 		self.square_colors = [(255, 206, 158), (209, 139, 71)]
 		self.running = True
 		self.selected_piece = None
 		self.valid_moves = []
+		self.game_over = False
+		self.game_status = 'normal'
 		self.load_images()
 
 	def load_images(self):
@@ -86,11 +90,32 @@ class ChessUI:
 		self.draw_turn_indicator()
 
 	def draw_turn_indicator(self):
-		"""Draw a text indicator showing whose turn it is"""
+		"""Draw a text indicator showing whose turn it is and game status"""
 		font = pygame.font.Font(None, 36)
-		turn_text = "White's Turn" if self.board_state.white_turn else "Black's Turn"
-		text_color = (255, 255, 255) if self.board_state.white_turn else (0, 0, 0)
-		bg_color = (0, 0, 0) if self.board_state.white_turn else (255, 255, 255)
+		
+		# Check game status
+		self.game_status = self.mate_detector.get_game_status(self.board_state)
+		
+		if self.game_status == 'checkmate':
+			winner = "Black" if self.board_state.white_turn else "White"
+			turn_text = f"Checkmate! {winner} Wins!"
+			text_color = (255, 0, 0)
+			bg_color = (255, 255, 255)
+			self.game_over = True
+		elif self.game_status == 'stalemate':
+			turn_text = "Stalemate! Draw!"
+			text_color = (128, 128, 128)
+			bg_color = (255, 255, 255)
+			self.game_over = True
+		elif self.game_status == 'check':
+			player = "White" if self.board_state.white_turn else "Black"
+			turn_text = f"Check! {player}'s Turn"
+			text_color = (255, 0, 0)
+			bg_color = (255, 255, 255)
+		else:
+			turn_text = "White's Turn" if self.board_state.white_turn else "Black's Turn"
+			text_color = (255, 255, 255) if self.board_state.white_turn else (0, 0, 0)
+			bg_color = (0, 0, 0) if self.board_state.white_turn else (255, 255, 255)
 		
 		text_surface = font.render(turn_text, True, text_color, bg_color)
 		text_rect = text_surface.get_rect()
@@ -98,6 +123,24 @@ class ChessUI:
 		text_rect.y = 10
 		
 		self.screen.blit(text_surface, text_rect)
+		
+		# If game is over, show restart instruction
+		if self.game_over:
+			font_small = pygame.font.Font(None, 24)
+			restart_text = "Press 'R' to restart"
+			restart_surface = font_small.render(restart_text, True, (100, 100, 100), (255, 255, 255))
+			restart_rect = restart_surface.get_rect()
+			restart_rect.centerx = self.width // 2
+			restart_rect.y = text_rect.bottom + 5
+			self.screen.blit(restart_surface, restart_rect)
+
+	def restart_game(self):
+		"""Restart the game to initial state"""
+		self.board_state = BoardRepresentation()
+		self.selected_piece = None
+		self.valid_moves = []
+		self.game_over = False
+		self.game_status = 'normal'
 
 	def get_image_key(self, piece):
 		piece_map = self.board_state.piece_map
@@ -115,7 +158,7 @@ class ChessUI:
 			if event.type == pygame.QUIT:
 				self.running = False
 			elif event.type == pygame.MOUSEBUTTONDOWN:
-				if event.button == 1:
+				if event.button == 1 and not self.game_over:  # Only handle clicks if game is not over
 					mouse_x, mouse_y = event.pos
 					col = mouse_x // self.square_size
 					row = mouse_y // self.square_size
@@ -134,6 +177,9 @@ class ChessUI:
 							self.board_state.make_move(self.selected_piece, pos)
 						self.selected_piece = None
 						self.valid_moves = []
+			elif event.type == pygame.KEYDOWN:
+				if event.key == pygame.K_r and self.game_over:  # Press 'R' to restart when game is over
+					self.restart_game()
 
 
 	def run(self):
