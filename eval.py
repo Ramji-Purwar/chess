@@ -1,11 +1,3 @@
-"""
-Enhanced Chess Position Evaluation Function with Advanced Pattern Recognition
-Based on traditional hand-crafted evaluation principles with sophisticated tactical and strategic patterns
-"""
-
-# Piece-Square Tables for different game phases (positional bonuses in centipawns)
-
-# PAWN TABLES
 PST_PAWN_OPENING = [
      0,  0,  0,  0,  0,  0,  0,  0,
     50, 50, 50, 50, 50, 50, 50, 50,
@@ -1492,55 +1484,3 @@ def analyze_position_by_phase(board_string):
         
         total_simplified = material_score + position_score
         print(f"{total_simplified:+7.1f} (Material: {material_score:+5.0f}, Position: {position_score:+6.1f})")
-
-
-if __name__ == "__main__":
-    # Test the enhanced evaluation function with pattern recognition
-    starting_position = "rnbqkbnrpppppppp................................PPPPPPPPRNBQKBNR"
-    
-    print("=== ENHANCED EVALUATION WITH ADVANCED PATTERNS ===")
-    print("Starting position evaluation:")
-    print(f"Score: {evaluate_position(starting_position, True)}")
-    print(f"Material only: {evaluate_material_only(starting_position)}")
-    print(f"Is endgame: {is_endgame(starting_position)}")
-    print(f"Game phase: {get_game_phase(starting_position):.2f}")
-    
-    # Test position with advanced patterns
-    print("\n=== PATTERN RECOGNITION TESTS ===")
-    
-    # 1. Position with knight outpost on d5
-    outpost_pos = "r1bqkb1rpppp1ppp....n......NP.................................PPPP.PPPRNBQKB1R"
-    print(f"\nKnight outpost position: {evaluate_position(outpost_pos, True)}")
-    
-    # 2. Position with bishop pair
-    bishop_pair_pos = "r1bqk2rpppp1pppn.......b..........P...........N...........PPPP.PPPRNBQK2R"
-    print(f"Bishop pair position: {evaluate_position(bishop_pair_pos, True)}")
-    
-    # 3. Position with doubled rooks
-    doubled_rooks_pos = "....k...........r.......r...............................R.......R.......K..."
-    print(f"Doubled rooks position: {evaluate_position(doubled_rooks_pos, True)}")
-    
-    # 4. Endgame with king activity
-    active_king_pos = "........k.......p...............................P.......K........"
-    print(f"Active king endgame: {evaluate_position(active_king_pos, True)}")
-    
-    # 5. Test endgame position
-    endgame_position = "........k.......................................................K......."
-    print(f"\nEndgame position evaluation: {evaluate_position(endgame_position, True)}")
-    print(f"Is endgame: {is_endgame(endgame_position)}")
-    print(f"Game phase: {get_game_phase(endgame_position):.2f}")
-    
-    print("\n=== PATTERN FEATURES IMPLEMENTED ===")
-    print("✓ Queen-Rook batteries")
-    print("✓ Enhanced bishop pair evaluation")
-    print("✓ Bad bishop detection") 
-    print("✓ Knight fork potential")
-    print("✓ Doubled rooks on files")
-    print("✓ Rook behind passed pawn")
-    print("✓ Pawn majority evaluation")
-    print("✓ King activity in endgame")
-    print("✓ Pin detection (tactical)")
-    print("✓ Weak square identification")
-    print("✓ Fianchettoed bishop patterns")
-    print("✓ Connected rook evaluation")
-    print("✓ All integrated with phase-dependent evaluation!")

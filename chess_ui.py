@@ -8,6 +8,7 @@ from check_detector import CheckDetector
 from mate_detector import MateDetector
 from moves.pawn import PawnMoves
 from best_move import BestMoveEngine
+from notation_convert import AlgebraicNotationConverter
 
 class ChessUI:
 	def __init__(self):
@@ -42,10 +43,15 @@ class ChessUI:
 		self.computer_thinking = False
 		self.computer_move_thread = None
 		
+		# Notation converter for storing algebraic notation
+		self.notation_converter = AlgebraicNotationConverter()
+		self.move_count = 0  # Track number of moves for incremental conversion
+		
 		self.load_images()
 		
 		# Clear game.txt and save initial board state
 		self.clear_game_file()
+		self.clear_algebraic_file()  # Also clear algebraic notation file
 		self.save_board_state()
 
 	def load_images(self):
@@ -263,6 +269,7 @@ class ChessUI:
 			if not self.game_over:  # Only set game_over and clear if not already done
 				self.game_over = True
 				self.clear_game_file()  # Clear game.txt when game ends
+				self.clear_algebraic_file()  # Clear game_.txt when game ends
 		elif self.game_status == 'stalemate':
 			turn_text = "Stalemate! Draw!"
 			text_color = (128, 128, 128)
@@ -270,6 +277,7 @@ class ChessUI:
 			if not self.game_over:  # Only set game_over and clear if not already done
 				self.game_over = True
 				self.clear_game_file()  # Clear game.txt when game ends
+				self.clear_algebraic_file()  # Clear game_.txt when game ends
 		elif self.game_status == 'repetition_draw':
 			turn_text = "Draw by 3-fold repetition!"
 			text_color = (0, 0, 255)  # Blue for repetition draw
@@ -277,6 +285,7 @@ class ChessUI:
 			if not self.game_over:  # Only set game_over and clear if not already done
 				self.game_over = True
 				self.clear_game_file()  # Clear game.txt when game ends
+				self.clear_algebraic_file()  # Clear game_.txt when game ends
 		elif self.game_status == 'fifty_move_draw':
 			turn_text = "Draw by 50-move rule!"
 			text_color = (128, 0, 128)  # Purple for 50-move draw
@@ -284,6 +293,7 @@ class ChessUI:
 			if not self.game_over:  # Only set game_over and clear if not already done
 				self.game_over = True
 				self.clear_game_file()  # Clear game.txt when game ends
+				self.clear_algebraic_file()  # Clear game_.txt when game ends
 		elif self.game_status == 'check':
 			current_player = "White" if self.board_state.white_turn else "Black"
 			is_computer = (self.board_state.white_turn and self.computer_is_white) or \
@@ -458,8 +468,76 @@ class ChessUI:
 		try:
 			with open("game.txt", "a") as f:
 				f.write(f"{self.board_state.board}\n")
+			
+			# Update algebraic notation after saving board state
+			self.update_algebraic_notation()
 		except Exception as e:
 			print(f"Error saving board state: {e}")
+
+	def update_algebraic_notation(self):
+		"""Update the algebraic notation file with the latest move"""
+		try:
+			# Read all board states from game.txt
+			with open("game.txt", "r") as f:
+				board_states = [line.strip() for line in f.readlines() if line.strip()]
+			
+			# If we have at least 2 board states, we can convert the latest move
+			if len(board_states) >= 2:
+				# Only convert the latest move (incremental approach)
+				old_board = board_states[-2]
+				new_board = board_states[-1]
+				
+				# Determine whose turn it was (starts with white=True for first move)
+				is_white_turn = (len(board_states) % 2 == 0)
+				
+				# Convert the latest move to algebraic notation
+				move_notation = self.notation_converter.convert_move_to_algebraic(
+					old_board, new_board, is_white_turn
+				)
+				
+				if move_notation and move_notation != "UNKNOWN_MOVE":
+					# Add check/checkmate notation
+					if self.notation_converter.is_checkmate(new_board, is_white_turn):
+						move_notation += "#"
+					elif self.notation_converter.is_check(new_board, is_white_turn):
+						move_notation += "+"
+					
+					# Append to algebraic notation file
+					self.append_algebraic_move(move_notation, is_white_turn)
+		except Exception as e:
+			print(f"Error updating algebraic notation: {e}")
+
+	def append_algebraic_move(self, move_notation, is_white_turn):
+		"""Append a move to the algebraic notation file"""
+		try:
+			# Read existing content
+			try:
+				with open("game_.txt", "r") as f:
+					existing_content = f.read().strip()
+			except FileNotFoundError:
+				existing_content = ""
+			
+			# Simple format: just append moves separated by spaces
+			if existing_content:
+				new_content = f"{existing_content} {move_notation}"
+			else:
+				new_content = move_notation
+			
+			# Write updated content
+			with open("game_.txt", "w") as f:
+				f.write(new_content)
+				
+		except Exception as e:
+			print(f"Error appending algebraic move: {e}")
+
+	def clear_algebraic_file(self):
+		"""Clear the game_.txt file"""
+		try:
+			with open("game_.txt", "w") as f:
+				f.write("")  # Clear the file
+			self.move_count = 0  # Reset move counter
+		except Exception as e:
+			print(f"Error clearing algebraic file: {e}")
 
 	def clear_game_file(self):
 		"""Clear the game.txt file when game is complete"""
@@ -485,6 +563,7 @@ class ChessUI:
 		self.computer_is_white = False
 		self.computer_is_black = False
 		self.clear_game_file()  # Clear game.txt when restarting
+		self.clear_algebraic_file()  # Clear game_.txt when restarting
 		self.save_board_state()  # Save the initial position
 
 	def get_image_key(self, piece):
