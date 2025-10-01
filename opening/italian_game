@@ -1,0 +1,616 @@
+{
+  "opening_name": "Italian Game",
+  "eco_code": "C50-C59",
+  "description": "One of the oldest recorded chess openings, appearing in literature dating back to the 15th century. White develops the bishop to c4 targeting the weak f7 square.",
+  "main_line": "1.e4 e5 2.Nf3 Nc6 3.Bc4",
+  
+  "book": {
+    "start": {
+      "best_moves": ["e4"]
+    },
+    
+    "e4": {
+      "best_moves": ["e5"]
+    },
+    
+    "e4 e5": {
+      "best_moves": ["Nf3"]
+    },
+    
+    "e4 e5 Nf3": {
+      "best_moves": ["Nc6"]
+    },
+    
+    "e4 e5 Nf3 Nc6": {
+      "best_moves": ["Bc4"],
+      "note": "The Italian Game begins - targeting f7"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4": {
+      "best_moves": ["Bc5", "Nf6", "Be7", "d6"],
+      "variations": {
+        "Bc5": "Giuoco Piano (Quiet Game)",
+        "Nf6": "Two Knights Defense",
+        "Be7": "Hungarian Defense",
+        "d6": "Paris Defense"
+      }
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5": {
+      "best_moves": ["c3", "d3", "b4", "O-O", "Nc3"],
+      "variations": {
+        "c3": "Main Line Giuoco Piano",
+        "d3": "Giuoco Pianissimo",
+        "b4": "Evans Gambit",
+        "O-O": "Center holding variation",
+        "Nc3": "Four Knights Italian"
+      },
+      "note": "Giuoco Piano - The Quiet Game"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 c3": {
+      "best_moves": ["Nf6", "Qe7", "Bb6", "d6"],
+      "note": "White prepares d4 central break"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6": {
+      "best_moves": ["d4", "d3", "b4"],
+      "note": "Most common continuation"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4": {
+      "best_moves": ["exd4", "Bb6", "Bd6"],
+      "variations": {
+        "exd4": "Main Line",
+        "Bb6": "Center holding",
+        "Bd6": "Moeller Attack"
+      },
+      "note": "Central tension - critical position"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 exd4": {
+      "best_moves": ["cxd4", "e5", "O-O"],
+      "variations": {
+        "cxd4": "Open center",
+        "e5": "Gambit continuation",
+        "O-O": "Delayed recapture"
+      }
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 exd4 cxd4": {
+      "best_moves": ["Bb4+", "Bb6", "Nxe4"],
+      "variations": {
+        "Bb4+": "Greco Variation",
+        "Bb6": "Main Line continuation",
+        "Nxe4": "Aggressive capture"
+      }
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 exd4 cxd4 Bb4+": {
+      "best_moves": ["Bd2", "Nc3", "Kf1"],
+      "variations": {
+        "Bd2": "Most popular",
+        "Nc3": "Allowing pin",
+        "Kf1": "Bold king move"
+      },
+      "note": "Greco Variation - Black checks immediately"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 exd4 cxd4 Bb4+ Bd2": {
+      "best_moves": ["Bxd2+", "Nxe4", "Qa5"],
+      "note": "Black must decide on bishop trade"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 exd4 cxd4 Bb4+ Bd2 Bxd2+": {
+      "best_moves": ["Nbxd2", "Qxd2"],
+      "note": "Bishops traded"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 exd4 cxd4 Bb4+ Bd2 Bxd2+ Nbxd2": {
+      "best_moves": ["d5", "O-O", "d6"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 exd4 cxd4 Bb4+ Nc3": {
+      "best_moves": ["Nxe4", "Bxc3+", "d5"],
+      "note": "White blocks with knight"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 exd4 cxd4 Bb4+ Nc3 Nxe4": {
+      "best_moves": ["O-O"],
+      "note": "White gambits the e4 pawn"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 exd4 cxd4 Bb4+ Nc3 Nxe4 O-O": {
+      "best_moves": ["Bxc3", "Nxc3"],
+      "note": "Complex tactical position"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 exd4 cxd4 Bb4+ Kf1": {
+      "best_moves": ["Nxe4", "d5"],
+      "note": "Bold king move avoiding pin"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 exd4 cxd4 Bb6": {
+      "best_moves": ["d5", "Nc3", "e5", "O-O"],
+      "variations": {
+        "d5": "Central pawn advance",
+        "Nc3": "Development",
+        "e5": "Pushing the knight",
+        "O-O": "Castling first"
+      },
+      "note": "Main Line - bishop retreats to safety"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 exd4 cxd4 Bb6 d5": {
+      "best_moves": ["Ne7", "Na5"],
+      "note": "White gains space"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 exd4 cxd4 Bb6 Nc3": {
+      "best_moves": ["O-O", "d6", "Nxe4"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 exd4 cxd4 Bb6 e5": {
+      "best_moves": ["d5", "Ne4"],
+      "note": "Aggressive pawn push"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 exd4 cxd4 Bb6 O-O": {
+      "best_moves": ["O-O", "d6", "Nxe4"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 exd4 e5": {
+      "best_moves": ["d5", "Ng4", "Ne4"],
+      "note": "Gambit line - White sacrifices for attack"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 exd4 e5 d5": {
+      "best_moves": ["Bb5", "exf6"],
+      "note": "Center becomes open"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 exd4 e5 Ne4": {
+      "best_moves": ["Bd5", "cxd4"],
+      "note": "Knight jumps to e4"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 Bb6": {
+      "best_moves": ["dxe5", "d5", "Bg5"],
+      "note": "Black holds the center with bishop retreat"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Qe7": {
+      "best_moves": ["d4", "O-O"],
+      "note": "Black prepares to recapture on e5 with queen"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Qe7 d4": {
+      "best_moves": ["Bb6"],
+      "note": "Moeller Attack setup"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 d6": {
+      "best_moves": ["d4", "b4", "O-O"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 d3": {
+      "best_moves": ["Nf6", "d6", "Qe7"],
+      "note": "Giuoco Pianissimo - The Very Quiet Game"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 d3 Nf6": {
+      "best_moves": ["O-O", "Nc3", "c3", "Bb3"],
+      "note": "Solid, positional approach"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 d3 Nf6 O-O": {
+      "best_moves": ["O-O", "d6", "h6"],
+      "note": "White castles first"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 d3 Nf6 O-O O-O": {
+      "best_moves": ["c3", "Nc3", "h3", "Bg5", "Re1"],
+      "note": "Both sides castled - maneuvering begins"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 d3 Nf6 O-O O-O c3": {
+      "best_moves": ["d6", "d5", "a6", "Bb6"],
+      "note": "White prepares d4 or b4"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 d3 Nf6 O-O O-O c3 d6": {
+      "best_moves": ["Bb3", "Nbd2", "h3", "Re1"],
+      "note": "Typical Pianissimo structure"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 d3 Nf6 O-O O-O c3 d6 Bb3": {
+      "best_moves": ["a6", "h6", "Ne7"],
+      "note": "Bishop retreats to safety"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 d3 Nf6 O-O O-O Nc3": {
+      "best_moves": ["d6", "h6", "a6"],
+      "note": "White develops naturally"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 d3 Nf6 O-O d6": {
+      "best_moves": ["c3", "Nc3", "h3"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 d3 d6": {
+      "best_moves": ["O-O", "c3", "Nc3"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 b4": {
+      "best_moves": ["Bxb4"],
+      "note": "Evans Gambit - sacrificing pawn for rapid development"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 b4 Bxb4": {
+      "best_moves": ["c3"],
+      "note": "Evans Gambit Accepted"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 b4 Bxb4 c3": {
+      "best_moves": ["Ba5", "Bc5", "Be7"],
+      "variations": {
+        "Ba5": "Main Line",
+        "Bc5": "Compromised Defense",
+        "Be7": "Lasker Defense"
+      }
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 b4 Bxb4 c3 Ba5": {
+      "best_moves": ["d4", "O-O"],
+      "note": "Evans Gambit Main Line"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 b4 Bxb4 c3 Ba5 d4": {
+      "best_moves": ["exd4", "d6"],
+      "note": "White opens the center with tempo"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 b4 Bxb4 c3 Ba5 d4 exd4": {
+      "best_moves": ["O-O", "cxd4"],
+      "note": "Sharp tactical play"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 b4 Bxb4 c3 Ba5 d4 d6": {
+      "best_moves": ["O-O", "Qb3"],
+      "note": "Black declines to capture on d4"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 b4 Bb6": {
+      "best_moves": ["a4", "b5"],
+      "note": "Evans Gambit Declined"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 O-O": {
+      "best_moves": ["Nf6", "d6"],
+      "note": "White castles immediately"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 O-O Nf6": {
+      "best_moves": ["d3", "d4", "Nc3", "c3"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 Nc3": {
+      "best_moves": ["Nf6", "d6"],
+      "note": "Four Knights Italian Game"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Bc5 Nc3 Nf6": {
+      "best_moves": ["d3", "O-O"],
+      "note": "All minor pieces developed"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6": {
+      "best_moves": ["Ng5", "d3", "d4", "Nc3", "O-O"],
+      "variations": {
+        "Ng5": "Attacking f7 - Fried Liver prep",
+        "d3": "Quiet continuation",
+        "d4": "Max Lange Attack",
+        "Nc3": "Four Knights",
+        "O-O": "Delayed aggression"
+      },
+      "note": "Two Knights Defense"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5": {
+      "best_moves": ["d5", "Bc5", "Na5"],
+      "variations": {
+        "d5": "Main Defense",
+        "Bc5": "Traxler/Wilkes-Barre Counterattack",
+        "Na5": "Polerio Defense immediately"
+      },
+      "note": "Aggressive knight move attacking f7"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 d5": {
+      "best_moves": ["exd5", "d3", "d4"],
+      "variations": {
+        "exd5": "Main Line - accepting the pawn",
+        "d3": "Quiet Variation",
+        "d4": "Fritz Variation"
+      },
+      "note": "Black counter-sacrifices pawn for development"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 d5 exd5": {
+      "best_moves": ["Nxd5", "Na5", "Nd4"],
+      "variations": {
+        "Nxd5": "Leads to Fried Liver or Lolli",
+        "Na5": "Polerio Defense",
+        "Nd4": "Fritz Variation"
+      }
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 d5 exd5 Nxd5": {
+      "best_moves": ["Nxf7", "d4", "Qf3"],
+      "variations": {
+        "Nxf7": "Fried Liver Attack",
+        "d4": "Lolli Attack",
+        "Qf3": "Modern Variation"
+      },
+      "note": "Critical position in Two Knights"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 d5 exd5 Nxd5 Nxf7": {
+      "best_moves": ["Kxf7"],
+      "note": "The Fried Liver Attack! White sacrifices knight for devastating attack"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 d5 exd5 Nxd5 Nxf7 Kxf7": {
+      "best_moves": ["Qf3+"],
+      "note": "White continues the assault"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 d5 exd5 Nxd5 Nxf7 Kxf7 Qf3+": {
+      "best_moves": ["Ke6", "Kg8", "Ke8"],
+      "variations": {
+        "Ke6": "Main Line - bold king march",
+        "Kg8": "Safer option",
+        "Ke8": "Retreating"
+      }
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 d5 exd5 Nxd5 Nxf7 Kxf7 Qf3+ Ke6": {
+      "best_moves": ["Nc3", "d4"],
+      "note": "King walks into center - critical theory"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 d5 exd5 Nxd5 d4": {
+      "best_moves": ["Qxg5", "exd4"],
+      "note": "Lolli Attack - more positional than Fried Liver"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 d5 exd5 Nxd5 d4 exd4": {
+      "best_moves": ["O-O", "c3"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 d5 exd5 Na5": {
+      "best_moves": ["Bb5+", "d3", "Qf3"],
+      "variations": {
+        "Bb5+": "Main Line with check",
+        "d3": "Canal Variation",
+        "Qf3": "Quiet approach"
+      },
+      "note": "Polerio Defense - avoiding Fried Liver"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 d5 exd5 Na5 Bb5+": {
+      "best_moves": ["c6", "Bd7"],
+      "variations": {
+        "c6": "Main Line",
+        "Bd7": "Avoiding pawn weaknesses"
+      }
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 d5 exd5 Na5 Bb5+ c6": {
+      "best_moves": ["dxc6", "Ba4", "Bd3"],
+      "note": "White must decide how to proceed"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 d5 exd5 Na5 Bb5+ c6 dxc6": {
+      "best_moves": ["bxc6", "Nxc6"],
+      "note": "Pawn structure imbalanced"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 d5 exd5 Na5 d3": {
+      "best_moves": ["h6", "Nxc4"],
+      "note": "Canal Variation - quieter approach"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 d5 exd5 Nd4": {
+      "best_moves": ["c3", "d3"],
+      "note": "Fritz Variation"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 Bc5": {
+      "best_moves": ["Nxf7", "Bxf7+", "d4"],
+      "variations": {
+        "Nxf7": "Accepting the counter-gambit",
+        "Bxf7+": "Checking first",
+        "d4": "Central counter"
+      },
+      "note": "Traxler/Wilkes-Barre Counterattack - Black counter-gambits!"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 Bc5 Nxf7": {
+      "best_moves": ["Bxf2+"],
+      "note": "Wild counterattack with bishop sacrifice"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 Bc5 Bxf7+": {
+      "best_moves": ["Ke7"],
+      "note": "King must move"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 d4": {
+      "best_moves": ["exd4", "Nxd4"],
+      "note": "Max Lange Attack preparation"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 d4 exd4": {
+      "best_moves": ["O-O", "e5", "Ng5"],
+      "variations": {
+        "O-O": "Max Lange Gambit",
+        "e5": "Max Lange Attack",
+        "Ng5": "Aggressive continuation"
+      }
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 d4 exd4 O-O": {
+      "best_moves": ["Bc5", "Nxe4", "d6"],
+      "note": "White gambits pawn for quick development"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 d4 exd4 O-O Bc5": {
+      "best_moves": ["e5"],
+      "note": "Pushing the knight"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 d4 exd4 O-O Bc5 e5": {
+      "best_moves": ["d5", "Ng4"],
+      "note": "Max Lange Attack proper - sharp tactical play"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 d4 exd4 O-O Bc5 e5 d5": {
+      "best_moves": ["exf6", "Bb5"],
+      "note": "Positions become very sharp"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 d4 exd4 O-O Bc5 e5 Ng4": {
+      "best_moves": ["c3", "Re1"],
+      "note": "Knight attacks f2"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 d4 exd4 e5": {
+      "best_moves": ["d5", "Ng4", "Ne4"],
+      "note": "Immediate push - Scotch Gambit/Max Lange"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 d4 exd4 e5 d5": {
+      "best_moves": ["Bb5", "exf6"],
+      "note": "Complex tactics arise"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 d3": {
+      "best_moves": ["Be7", "Bc5", "d5", "h6"],
+      "note": "Quiet Italian Game"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 d3 Be7": {
+      "best_moves": ["O-O", "c3", "Nc3"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 d3 Be7 O-O": {
+      "best_moves": ["O-O", "d6"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 d3 Bc5": {
+      "best_moves": ["O-O", "c3"],
+      "note": "Transpose to Giuoco Pianissimo"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 Nc3": {
+      "best_moves": ["Bc5", "Nxe4", "Be7"],
+      "note": "Four Knights Italian"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 Nc3 Bc5": {
+      "best_moves": ["d3", "O-O", "Ng5"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 Nc3 Nxe4": {
+      "best_moves": ["Nxe4", "Bxf7+"],
+      "note": "Black captures pawn"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nf6 O-O": {
+      "best_moves": ["Nxe4", "Bc5", "Be7"],
+      "note": "White castles early"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Be7": {
+      "best_moves": ["d4", "d3", "O-O"],
+      "note": "Hungarian Defense"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Be7 d4": {
+      "best_moves": ["exd4", "d6"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Be7 d4 exd4": {
+      "best_moves": ["Nxd4", "c3"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Be7 d4 exd4 Nxd4": {
+      "best_moves": ["Nf6", "d6", "Nxd4"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Be7 d3": {
+      "best_moves": ["Nf6", "d6"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 d6": {
+      "best_moves": ["d4", "O-O", "c3", "d3"],
+      "note": "Paris Defense - solid but passive"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 d6 d4": {
+      "best_moves": ["exd4", "Nf6"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 d6 d4 exd4": {
+      "best_moves": ["Nxd4"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 d6 d4 exd4 Nxd4": {
+      "best_moves": ["Nf6", "Be7"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 d6 c3": {
+      "best_moves": ["Nf6", "Bg4", "Qe7"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 d6 d3": {
+      "best_moves": ["Nf6", "Be7", "Bg4"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 h6": {
+      "best_moves": ["d4", "O-O", "c3", "d3"],
+      "note": "Anti-Ng5 prophylaxis"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 g6": {
+      "best_moves": ["d4", "O-O", "c3"],
+      "note": "Fianchetto setup"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Na5": {
+      "best_moves": ["Nxe5", "Bxf7+"],
+      "note": "Rare early knight retreat"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Qe7": {
+      "best_moves": ["d4", "O-O", "Nc3"],
+      "note": "Preparing to recapture on e5"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 Nd4": {
+      "best_moves": ["Nxd4", "Nxe5"],
+      "note": "Premature knight jump"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 f5": {
+      "best_moves": ["d3", "d4"],
+      "note": "Counter-gambit attempt"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bc4 a6": {
+      "best_moves": ["d4", "O-O", "c3"],
+      "note": "Preventing Bb5, preparing b5"
+    }
+  } 
+}

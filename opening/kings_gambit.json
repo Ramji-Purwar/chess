@@ -1,0 +1,271 @@
+{
+  "opening_name": "King's Gambit",
+  "eco_code": "C30-C39",
+  "description": "Aggressive opening where White sacrifices a pawn for rapid development and attacking chances",
+  "main_line": "1.e4 e5 2.f4",
+  
+  "book": {
+    "start": {
+      "best_moves": ["e4"]
+    },
+    
+    "e4": {
+      "best_moves": ["e5"]
+    },
+    
+    "e4 e5": {
+      "best_moves": ["f4"],
+      "note": "King's Gambit - offering the f-pawn"
+    },
+    
+    "e4 e5 f4": {
+      "best_moves": ["exf4", "Bc5", "d5"],
+      "variations": {
+        "exf4": "King's Gambit Accepted",
+        "Bc5": "King's Gambit Declined - Classical",
+        "d5": "Falkbeer Counter Gambit"
+      }
+    },
+    
+    "e4 e5 f4 exf4": {
+      "best_moves": ["Nf3", "Bc4"],
+      "variations": {
+        "Nf3": "King's Knight Gambit",
+        "Bc4": "Bishop's Gambit"
+      },
+      "note": "King's Gambit Accepted"
+    },
+    
+    "e4 e5 f4 exf4 Nf3": {
+      "best_moves": ["g5", "d6", "Nf6", "Be7"],
+      "variations": {
+        "g5": "Classical Variation",
+        "d6": "Fischer Defense",
+        "Nf6": "Modern Defense",
+        "Be7": "Cunningham Defense"
+      }
+    },
+    
+    "e4 e5 f4 exf4 Nf3 g5": {
+      "best_moves": ["Bc4", "h4"],
+      "variations": {
+        "Bc4": "Kieseritzky Gambit",
+        "h4": "Allgaier Gambit"
+      },
+      "note": "Classical Variation - Black defends the gambit pawn"
+    },
+    
+    "e4 e5 f4 exf4 Nf3 g5 Bc4": {
+      "best_moves": ["g4", "Bg7"],
+      "note": "Kieseritzky Gambit"
+    },
+    
+    "e4 e5 f4 exf4 Nf3 g5 Bc4 g4": {
+      "best_moves": ["O-O", "Ne5", "d4"],
+      "variations": {
+        "O-O": "Kieseritzky Main Line",
+        "Ne5": "Rice Gambit"
+      }
+    },
+    
+    "e4 e5 f4 exf4 Nf3 g5 Bc4 g4 O-O": {
+      "best_moves": ["gxf3"],
+      "note": "White sacrifices the knight"
+    },
+    
+    "e4 e5 f4 exf4 Nf3 g5 Bc4 g4 O-O gxf3": {
+      "best_moves": ["Qxf3"],
+      "note": "Queen recaptures with strong attack"
+    },
+    
+    "e4 e5 f4 exf4 Nf3 g5 Bc4 g4 O-O gxf3 Qxf3": {
+      "best_moves": ["Qf6", "Nc6", "Qe7"]
+    },
+    
+    "e4 e5 f4 exf4 Nf3 g5 Bc4 g4 Ne5": {
+      "best_moves": ["Qh4+"],
+      "note": "Rice Gambit - very sharp"
+    },
+    
+    "e4 e5 f4 exf4 Nf3 g5 Bc4 g4 Ne5 Qh4+": {
+      "best_moves": ["Kf1"]
+    },
+    
+    "e4 e5 f4 exf4 Nf3 g5 Bc4 g4 d4": {
+      "best_moves": ["gxf3"],
+      "note": "Rosentreter Gambit"
+    },
+    
+    "e4 e5 f4 exf4 Nf3 g5 Bc4 Bg7": {
+      "best_moves": ["d4", "h4"],
+      "note": "Hanstein Gambit"
+    },
+    
+    "e4 e5 f4 exf4 Nf3 g5 h4": {
+      "best_moves": ["g4"],
+      "note": "Allgaier Gambit - very aggressive"
+    },
+    
+    "e4 e5 f4 exf4 Nf3 g5 h4 g4": {
+      "best_moves": ["Ng5"],
+      "note": "Knight jumps to g5"
+    },
+    
+    "e4 e5 f4 exf4 Nf3 g5 h4 g4 Ng5": {
+      "best_moves": ["h6", "f6", "Nf6"]
+    },
+    
+    "e4 e5 f4 exf4 Nf3 g5 h4 g4 Ng5 h6": {
+      "best_moves": ["Nxf7"],
+      "note": "Knight sacrifice on f7"
+    },
+    
+    "e4 e5 f4 exf4 Nf3 d6": {
+      "best_moves": ["d4", "Bc4"],
+      "note": "Fischer Defense - solid but passive"
+    },
+    
+    "e4 e5 f4 exf4 Nf3 d6 d4": {
+      "best_moves": ["g5", "Nf6"]
+    },
+    
+    "e4 e5 f4 exf4 Nf3 Nf6": {
+      "best_moves": ["e5"],
+      "note": "Modern Defense - counterattacking"
+    },
+    
+    "e4 e5 f4 exf4 Nf3 Nf6 e5": {
+      "best_moves": ["Nh5"]
+    },
+    
+    "e4 e5 f4 exf4 Nf3 Nf6 e5 Nh5": {
+      "best_moves": ["d4", "g4"]
+    },
+    
+    "e4 e5 f4 exf4 Nf3 Be7": {
+      "best_moves": ["Bc4"],
+      "note": "Cunningham Defense"
+    },
+    
+    "e4 e5 f4 exf4 Nf3 Be7 Bc4": {
+      "best_moves": ["Bh4+", "Nf6"]
+    },
+    
+    "e4 e5 f4 exf4 Nf3 Be7 Bc4 Bh4+": {
+      "best_moves": ["g3"]
+    },
+    
+    "e4 e5 f4 exf4 Nf3 Be7 Bc4 Bh4+ g3": {
+      "best_moves": ["fxg3"]
+    },
+    
+    "e4 e5 f4 exf4 Bc4": {
+      "best_moves": ["Qh4+", "Nf6", "d5"],
+      "note": "Bishop's Gambit"
+    },
+    
+    "e4 e5 f4 exf4 Bc4 Qh4+": {
+      "best_moves": ["Kf1"],
+      "note": "King must move"
+    },
+    
+    "e4 e5 f4 exf4 Bc4 Qh4+ Kf1": {
+      "best_moves": ["d5", "Nc6", "g5"]
+    },
+    
+    "e4 e5 f4 exf4 Bc4 Qh4+ Kf1 d5": {
+      "best_moves": ["Bxd5"]
+    },
+    
+    "e4 e5 f4 exf4 Bc4 Nf6": {
+      "best_moves": ["Nc3", "d3"]
+    },
+    
+    "e4 e5 f4 exf4 Bc4 d5": {
+      "best_moves": ["Bxd5"],
+      "note": "Accepting the counter-sacrifice"
+    },
+    
+    "e4 e5 f4 Bc5": {
+      "best_moves": ["Nf3", "fxe5"],
+      "variations": {
+        "Nf3": "Classical Declined Main",
+        "fxe5": "Accepting the decline"
+      },
+      "note": "King's Gambit Declined - Classical"
+    },
+    
+    "e4 e5 f4 Bc5 Nf3": {
+      "best_moves": ["d6", "Nc6"]
+    },
+    
+    "e4 e5 f4 Bc5 Nf3 d6": {
+      "best_moves": ["c3", "Nc3"]
+    },
+    
+    "e4 e5 f4 Bc5 Nf3 d6 c3": {
+      "best_moves": ["Nf6"]
+    },
+    
+    "e4 e5 f4 Bc5 Nf3 d6 fxe5": {
+      "best_moves": ["dxe5"]
+    },
+    
+    "e4 e5 f4 d5": {
+      "best_moves": ["exd5", "Nf3"],
+      "note": "Falkbeer Counter Gambit"
+    },
+    
+    "e4 e5 f4 d5 exd5": {
+      "best_moves": ["e4"]
+    },
+    
+    "e4 e5 f4 d5 exd5 e4": {
+      "best_moves": ["d3", "Nc3", "Bb5+"]
+    },
+    
+    "e4 e5 f4 d5 exd5 e4 d3": {
+      "best_moves": ["Nf6", "exd3"]
+    },
+    
+    "e4 e5 f4 d5 exd5 e4 d3 Nf6": {
+      "best_moves": ["dxe4", "Nd2"]
+    },
+    
+    "e4 e5 f4 d5 exd5 e4 Nc3": {
+      "best_moves": ["Nf6"]
+    },
+    
+    "e4 e5 f4 d5 exd5 e4 Bb5+": {
+      "best_moves": ["c6"]
+    },
+    
+    "e4 e5 f4 d5 Nf3": {
+      "best_moves": ["dxe4"],
+      "note": "Modern Falkbeer"
+    },
+    
+    "e4 e5 f4 d5 Nf3 dxe4": {
+      "best_moves": ["Nxe5"]
+    },
+    
+    "e4 e5 f4 Nf6": {
+      "best_moves": ["fxe5"],
+      "note": "Nimzowitsch Counter Gambit"
+    },
+    
+    "e4 e5 f4 Nf6 fxe5": {
+      "best_moves": ["Nxe4"]
+    },
+    
+    "e4 e5 f4 Nc6": {
+      "best_moves": ["Nf3"],
+      "note": "Rare declining line"
+    },
+    
+    "e4 e5 f4 d6": {
+      "best_moves": ["Nf3"],
+      "note": "Quiet decline"
+    }
+  }
+}

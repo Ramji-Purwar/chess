@@ -1,0 +1,413 @@
+{
+  "opening_name": "Scotch Game",
+  "eco_code": "C44-C45",
+  "description": "An aggressive opening where White immediately challenges the center with d4. Popular at all levels, especially after Garry Kasparov's revival of the opening in the 1990s.",
+  "main_line": "1.e4 e5 2.Nf3 Nc6 3.d4",
+  
+  "book": {
+    "start": {
+      "best_moves": ["e4"]
+    },
+    
+    "e4": {
+      "best_moves": ["e5"]
+    },
+    
+    "e4 e5": {
+      "best_moves": ["Nf3"]
+    },
+    
+    "e4 e5 Nf3": {
+      "best_moves": ["Nc6"]
+    },
+    
+    "e4 e5 Nf3 Nc6": {
+      "best_moves": ["d4"],
+      "note": "Scotch Game - immediately challenging the center"
+    },
+    
+    "e4 e5 Nf3 Nc6 d4": {
+      "best_moves": ["exd4", "d6"],
+      "variations": {
+        "exd4": "Main Scotch",
+        "d6": "Scotch Gambit Declined"
+      }
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4": {
+      "best_moves": ["Nxd4", "Bc4"],
+      "variations": {
+        "Nxd4": "Scotch Game Main Line",
+        "Bc4": "Scotch Gambit"
+      }
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4": {
+      "best_moves": ["Nf6", "Bc5", "Qh4", "Bb4+"],
+      "variations": {
+        "Nf6": "Schmidt Variation",
+        "Bc5": "Classical Variation",
+        "Qh4": "Steinitz Variation",
+        "Bb4+": "Blumenfeld Variation"
+      },
+      "note": "Main position of the Scotch Game"
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nf6": {
+      "best_moves": ["Nxc6", "Nc3"],
+      "variations": {
+        "Nxc6": "Schmidt Variation Main",
+        "Nc3": "Mieses Variation"
+      },
+      "note": "Schmidt Variation - most popular"
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nf6 Nxc6": {
+      "best_moves": ["bxc6"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nf6 Nxc6 bxc6": {
+      "best_moves": ["e5", "Bd3", "Nc3"],
+      "variations": {
+        "e5": "Main Schmidt Line",
+        "Bd3": "Tartakower Variation",
+        "Nc3": "Paulsen Variation"
+      }
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nf6 Nxc6 bxc6 e5": {
+      "best_moves": ["Qe7", "Nd5"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nf6 Nxc6 bxc6 e5 Qe7": {
+      "best_moves": ["Qe2", "Be2"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nf6 Nxc6 bxc6 e5 Qe7 Qe2": {
+      "best_moves": ["Nd5"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nf6 Nxc6 bxc6 e5 Qe7 Qe2 Nd5": {
+      "best_moves": ["c4", "Nd2"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nf6 Nxc6 bxc6 e5 Qe7 Qe2 Nd5 c4": {
+      "best_moves": ["Ba6", "Nb6", "Nf4"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nf6 Nxc6 bxc6 e5 Qe7 Qe2 Nd5 c4 Ba6": {
+      "best_moves": ["b3", "Nf3"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nf6 Nxc6 bxc6 e5 Qe7 Qe2 Nd5 c4 Ba6 b3": {
+      "best_moves": ["g6", "Nb4"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nf6 Nxc6 bxc6 e5 Qe7 Qe2 Nd5 c4 Nb6": {
+      "best_moves": ["Nc3", "Nd2"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nf6 Nxc6 bxc6 e5 Nd5": {
+      "best_moves": ["c4"],
+      "note": "Alternative move order"
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nf6 Nxc6 bxc6 e5 Nd5 c4": {
+      "best_moves": ["Nb6", "Ba6"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nf6 Nxc6 bxc6 Bd3": {
+      "best_moves": ["d5", "Bc5"],
+      "note": "Tartakower Variation"
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nf6 Nxc6 bxc6 Bd3 d5": {
+      "best_moves": ["exd5"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nf6 Nxc6 bxc6 Bd3 d5 exd5": {
+      "best_moves": ["cxd5", "Qxd5"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nf6 Nxc6 bxc6 Bd3 d5 exd5 cxd5": {
+      "best_moves": ["O-O"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nf6 Nc3": {
+      "best_moves": ["Bb4", "d6"],
+      "note": "Mieses Variation"
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nf6 Nc3 Bb4": {
+      "best_moves": ["Nxc6", "Nf3"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nf6 Nc3 Bb4 Nxc6": {
+      "best_moves": ["bxc6"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nf6 Nc3 Bb4 Nxc6 bxc6": {
+      "best_moves": ["Bd3", "Bc4"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nf6 Nc3 Bb4 Nxc6 bxc6 Bd3": {
+      "best_moves": ["d5", "O-O"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Bc5": {
+      "best_moves": ["Be3", "Nxc6", "Nb3"],
+      "variations": {
+        "Be3": "Classical Main Line",
+        "Nxc6": "Exchange Variation",
+        "Nb3": "Blumenfeld Attack"
+      },
+      "note": "Classical Variation - bishop to c5"
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Bc5 Be3": {
+      "best_moves": ["Qf6", "Nf6", "Bb6"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Bc5 Be3 Qf6": {
+      "best_moves": ["c3", "Nb3"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Bc5 Be3 Qf6 c3": {
+      "best_moves": ["Nge7", "Qg6", "Nxd4"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Bc5 Be3 Qf6 c3 Nge7": {
+      "best_moves": ["Bc4", "Qd2", "Bb5"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Bc5 Be3 Qf6 c3 Nge7 Bc4": {
+      "best_moves": ["Ne5", "O-O", "b5"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Bc5 Be3 Qf6 c3 Nge7 Bc4 Ne5": {
+      "best_moves": ["Be2", "Bb3"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Bc5 Be3 Qf6 c3 Nge7 Bc4 O-O": {
+      "best_moves": ["O-O"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Bc5 Be3 Qf6 c3 Nge7 Bc4 O-O O-O": {
+      "best_moves": ["Bb6", "d6", "Nxd4"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Bc5 Be3 Qf6 Nb3": {
+      "best_moves": ["Bxe3"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Bc5 Be3 Qf6 Nb3 Bxe3": {
+      "best_moves": ["fxe3"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Bc5 Be3 Qf6 Nb3 Bxe3 fxe3": {
+      "best_moves": ["Qg6", "Qe7"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Bc5 Be3 Nf6": {
+      "best_moves": ["Nc3"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Bc5 Be3 Nf6 Nc3": {
+      "best_moves": ["O-O", "Ng4", "Bxd4"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Bc5 Be3 Nf6 Nc3 O-O": {
+      "best_moves": ["Be2", "Nb3"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Bc5 Nxc6": {
+      "best_moves": ["Qf6"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Bc5 Nxc6 Qf6": {
+      "best_moves": ["Qd2", "Qf3"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Bc5 Nxc6 Qf6 Qd2": {
+      "best_moves": ["dxc6"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Bc5 Nxc6 Qf6 Qd2 dxc6": {
+      "best_moves": ["Nc3"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Bc5 Nb3": {
+      "best_moves": ["Bb6", "Be7"],
+      "note": "Blumenfeld Attack"
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Bc5 Nb3 Bb6": {
+      "best_moves": ["Nc3", "a4"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Bc5 Nb3 Bb6 Nc3": {
+      "best_moves": ["Nf6", "Qf6"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Qh4": {
+      "best_moves": ["Nb5", "Nc3"],
+      "note": "Steinitz Variation - aggressive queen sortie"
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Qh4 Nb5": {
+      "best_moves": ["Bb4+", "Qxe4+"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Qh4 Nb5 Bb4+": {
+      "best_moves": ["Bd2", "c3", "Nd2"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Qh4 Nb5 Bb4+ Bd2": {
+      "best_moves": ["Qxe4+", "Bxd2+"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Qh4 Nb5 Bb4+ c3": {
+      "best_moves": ["Ba5", "Be7"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Qh4 Nb5 Bb4+ Nd2": {
+      "best_moves": ["Qxe4", "Kf8"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Qh4 Nc3": {
+      "best_moves": ["Bb4", "Bc5"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Qh4 Nc3 Bb4": {
+      "best_moves": ["Be2", "Nf3", "Nb5"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Bb4+": {
+      "best_moves": ["c3", "Nc3"],
+      "note": "Blumenfeld Variation"
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Bb4+ c3": {
+      "best_moves": ["Bc5", "Be7"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Bb4+ c3 Bc5": {
+      "best_moves": ["Be3", "Nxc6"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Bb4+ Nc3": {
+      "best_moves": ["Bxc3+"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Bb4+ Nc3 Bxc3+": {
+      "best_moves": ["bxc3"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Bb4+ Nc3 Bxc3+ bxc3": {
+      "best_moves": ["Nf6", "d6"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Bc4": {
+      "best_moves": ["Nf6", "Bc5"],
+      "variations": {
+        "Nf6": "Scotch Gambit Main",
+        "Bc5": "Scotch Gambit Classical"
+      },
+      "note": "Scotch Gambit - White sacrifices pawn for development"
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Bc4 Nf6": {
+      "best_moves": ["e5", "O-O"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Bc4 Nf6 e5": {
+      "best_moves": ["d5", "Ng4"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Bc4 Nf6 e5 d5": {
+      "best_moves": ["Bb5", "exf6"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Bc4 Nf6 e5 d5 Bb5": {
+      "best_moves": ["Ne4"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Bc4 Nf6 e5 d5 Bb5 Ne4": {
+      "best_moves": ["Nxd4", "O-O"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Bc4 Nf6 e5 Ng4": {
+      "best_moves": ["O-O"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Bc4 Nf6 O-O": {
+      "best_moves": ["Nxe4", "Bc5"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Bc4 Nf6 O-O Nxe4": {
+      "best_moves": ["Re1"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Bc4 Nf6 O-O Nxe4 Re1": {
+      "best_moves": ["d5"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Bc4 Bc5": {
+      "best_moves": ["c3", "O-O", "Ng5"],
+      "note": "Scotch Gambit Classical"
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Bc4 Bc5 c3": {
+      "best_moves": ["Nf6", "dxc3"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Bc4 Bc5 c3 Nf6": {
+      "best_moves": ["cxd4", "e5"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Bc4 Bc5 c3 Nf6 cxd4": {
+      "best_moves": ["Bb4+"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Bc4 Bc5 c3 Nf6 cxd4 Bb4+": {
+      "best_moves": ["Bd2", "Nc3"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Bc4 Bc5 c3 Nf6 e5": {
+      "best_moves": ["d5"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Bc4 Bc5 O-O": {
+      "best_moves": ["Nf6", "d6"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Bc4 Bc5 O-O Nf6": {
+      "best_moves": ["e5", "c3"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Bc4 Bc5 Ng5": {
+      "best_moves": ["Nh6"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 exd4 Bc4 Bc5 Ng5 Nh6": {
+      "best_moves": ["Qh5", "Nxf7"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 d6": {
+      "best_moves": ["dxe5", "d5"],
+      "note": "Scotch Gambit Declined - rare"
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 d6 dxe5": {
+      "best_moves": ["dxe5"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 d6 dxe5 dxe5": {
+      "best_moves": ["Qxd8+"]
+    },
+    
+    "e4 e5 Nf3 Nc6 d4 d6 dxe5 dxe5 Qxd8+": {
+      "best_moves": ["Nxd8"]
+    }
+  }
+}

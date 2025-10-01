@@ -1,0 +1,875 @@
+{
+  "opening_name": "French Defense",
+  "eco_code": "C00-C19",
+  "description": "A solid and strategically rich defense where Black allows White to build a strong pawn center with the plan to undermine it later. The French leads to unique pawn structures and is a favorite of positional players.",
+  "main_line": "1.e4 e6",
+  
+  "book": {
+    "start": {
+      "best_moves": ["e4"]
+    },
+    
+    "e4": {
+      "best_moves": ["e6", "c5", "e5"]
+    },
+    
+    "e4 e6": {
+      "best_moves": ["d4", "d3", "Nf3"],
+      "variations": {
+        "d4": "French Main Lines",
+        "d3": "King's Indian Attack",
+        "Nf3": "Réti/King's Indian Attack"
+      },
+      "note": "French Defense - solid and strategic"
+    },
+    
+    "e4 e6 d4": {
+      "best_moves": ["d5"],
+      "note": "Black strikes at the center"
+    },
+    
+    "e4 e6 d4 d5": {
+      "best_moves": ["Nc3", "Nd2", "e5", "exd5"],
+      "variations": {
+        "Nc3": "Winawer/Classical Variation",
+        "Nd2": "Tarrasch Variation",
+        "e5": "Advance Variation",
+        "exd5": "Exchange Variation"
+      },
+      "note": "Key position - White chooses plan"
+    },
+    
+    "e4 e6 d4 d5 Nc3": {
+      "best_moves": ["Bb4", "Nf6", "dxe4"],
+      "variations": {
+        "Bb4": "Winawer Variation",
+        "Nf6": "Classical Variation",
+        "dxe4": "Rubinstein Variation"
+      },
+      "note": "Most common continuation"
+    },
+    
+    "e4 e6 d4 d5 Nc3 Bb4": {
+      "best_moves": ["e5", "exd5", "Bd2", "a3"],
+      "variations": {
+        "e5": "Winawer Main Line",
+        "exd5": "Winawer Exchange",
+        "Bd2": "Winawer Retreat",
+        "a3": "Winawer Advance"
+      },
+      "note": "Winawer Variation - most critical line"
+    },
+    
+    "e4 e6 d4 d5 Nc3 Bb4 e5": {
+      "best_moves": ["c5", "Ne7", "b6"],
+      "variations": {
+        "c5": "Main Winawer",
+        "Ne7": "Nimzowitsch Variation",
+        "b6": "Portisch System"
+      }
+    },
+    
+    "e4 e6 d4 d5 Nc3 Bb4 e5 c5": {
+      "best_moves": ["a3", "Qg4", "Bd2"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3": {
+      "best_moves": ["Bxc3+", "Ba5"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+": {
+      "best_moves": ["bxc3"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3": {
+      "best_moves": ["Ne7", "Qa5"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Ne7": {
+      "best_moves": ["Qg4", "Nf3", "a4"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Ne7 Qg4": {
+      "best_moves": ["Qc7", "O-O", "cxd4"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Ne7 Qg4 O-O": {
+      "best_moves": ["Bd3", "Nf3"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Ne7 Qg4 Qc7": {
+      "best_moves": ["Qxg7"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Ne7 Qg4 Qc7 Qxg7": {
+      "best_moves": ["Rg8"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Ne7 Qg4 cxd4": {
+      "best_moves": ["cxd4", "Qxg7"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Ne7 Nf3": {
+      "best_moves": ["Qa5", "Nbc6", "Bd7"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Qa5": {
+      "best_moves": ["Bd2", "Qd2"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Ba5": {
+      "best_moves": ["b4"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Ba5 b4": {
+      "best_moves": ["cxd4"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Bb4 e5 c5 Qg4": {
+      "best_moves": ["Ne7", "cxd4"],
+      "note": "Poisoned Pawn Variation"
+    },
+    
+    "e4 e6 d4 d5 Nc3 Bb4 e5 c5 Qg4 Ne7": {
+      "best_moves": ["dxc5", "a3"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Bb4 e5 c5 Qg4 cxd4": {
+      "best_moves": ["Qxg7"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Bb4 e5 c5 Bd2": {
+      "best_moves": ["Ne7", "cxd4"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Bb4 e5 Ne7": {
+      "best_moves": ["a3", "Nf3"],
+      "note": "Nimzowitsch Variation"
+    },
+    
+    "e4 e6 d4 d5 Nc3 Bb4 e5 Ne7 a3": {
+      "best_moves": ["Bxc3+"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Bb4 e5 Ne7 Nf3": {
+      "best_moves": ["Nbc6", "c5"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Bb4 e5 b6": {
+      "best_moves": ["a3", "Qg4"],
+      "note": "Portisch System"
+    },
+    
+    "e4 e6 d4 d5 Nc3 Bb4 exd5": {
+      "best_moves": ["exd5", "Qxd5"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Bb4 exd5 exd5": {
+      "best_moves": ["Bd3", "Nf3"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Bb4 Bd2": {
+      "best_moves": ["dxe4", "Nf6"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Bb4 a3": {
+      "best_moves": ["Bxc3+"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Bb4 a3 Bxc3+": {
+      "best_moves": ["bxc3"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Bb4 a3 Bxc3+ bxc3": {
+      "best_moves": ["dxe4"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6": {
+      "best_moves": ["Bg5", "e5", "exd5"],
+      "variations": {
+        "Bg5": "Classical Main Line",
+        "e5": "Steinitz Variation",
+        "exd5": "Exchange Variation"
+      },
+      "note": "Classical Variation"
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5": {
+      "best_moves": ["Be7", "dxe4", "Bb4"],
+      "variations": {
+        "Be7": "Classical Main",
+        "dxe4": "Burn Variation",
+        "Bb4": "McCutcheon Variation"
+      }
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7": {
+      "best_moves": ["e5", "Bxf6", "exd5"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5": {
+      "best_moves": ["Nfd7", "Ng8", "Ne4"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7": {
+      "best_moves": ["Bxe7", "h4"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7": {
+      "best_moves": ["Qxe7"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7": {
+      "best_moves": ["f4", "Qd2", "Nb5"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7 f4": {
+      "best_moves": ["O-O", "a6", "c5"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7 f4 O-O": {
+      "best_moves": ["Nf3", "Qd2"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7 Qd2": {
+      "best_moves": ["O-O", "a6"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7 Nb5": {
+      "best_moves": ["O-O"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 h4": {
+      "best_moves": ["Bxg5", "c5", "O-O"],
+      "note": "Alekhine-Chatard Attack"
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 h4 Bxg5": {
+      "best_moves": ["hxg5"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 h4 Bxg5 hxg5": {
+      "best_moves": ["Qxg5"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 h4 c5": {
+      "best_moves": ["Bxe7", "Nb5"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 h4 O-O": {
+      "best_moves": ["Bd3", "Rh3"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Ng8": {
+      "best_moves": ["Bxe7", "h4"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Ne4": {
+      "best_moves": ["Bxe7", "Nxe4"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 Bxf6": {
+      "best_moves": ["Bxf6"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 Bxf6 Bxf6": {
+      "best_moves": ["e5", "Nf3"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 exd5": {
+      "best_moves": ["exd5"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 exd5 exd5": {
+      "best_moves": ["Bd3"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5 dxe4": {
+      "best_moves": ["Nxe4"],
+      "note": "Burn Variation"
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5 dxe4 Nxe4": {
+      "best_moves": ["Be7", "Nbd7"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5 dxe4 Nxe4 Be7": {
+      "best_moves": ["Bxf6", "Nxf6+"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5 dxe4 Nxe4 Be7 Bxf6": {
+      "best_moves": ["Bxf6"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5 dxe4 Nxe4 Be7 Bxf6 Bxf6": {
+      "best_moves": ["Nf3", "c3"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5 dxe4 Nxe4 Nbd7": {
+      "best_moves": ["Nf3", "Nxf6+"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5 Bb4": {
+      "best_moves": ["e5", "exd5"],
+      "note": "McCutcheon Variation"
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5 Bb4 e5": {
+      "best_moves": ["h6"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5 Bb4 e5 h6": {
+      "best_moves": ["exf6", "Bd2", "Bh4"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5 Bb4 e5 h6 exf6": {
+      "best_moves": ["hxg5"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5 Bb4 e5 h6 exf6 hxg5": {
+      "best_moves": ["fxg7"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5 Bb4 e5 h6 Bd2": {
+      "best_moves": ["Bxc3"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 Bg5 Bb4 exd5": {
+      "best_moves": ["Qxd5"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 e5": {
+      "best_moves": ["Nfd7", "Ng8"],
+      "note": "Steinitz Variation"
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 e5 Nfd7": {
+      "best_moves": ["f4", "Nf3", "Nce2"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 e5 Nfd7 f4": {
+      "best_moves": ["c5"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 e5 Nfd7 f4 c5": {
+      "best_moves": ["Nf3", "dxc5"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 e5 Nfd7 Nf3": {
+      "best_moves": ["c5"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 exd5": {
+      "best_moves": ["exd5"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 Nf6 exd5 exd5": {
+      "best_moves": ["Bg5", "Nf3"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 dxe4": {
+      "best_moves": ["Nxe4"],
+      "note": "Rubinstein Variation"
+    },
+    
+    "e4 e6 d4 d5 Nc3 dxe4 Nxe4": {
+      "best_moves": ["Nd7", "Bd7", "Nf6"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nd7": {
+      "best_moves": ["Nf3", "Bd3"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nd7 Nf3": {
+      "best_moves": ["Ngf6", "Be7"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nd7 Nf3 Ngf6": {
+      "best_moves": ["Nxf6+", "Bd3"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Bd7": {
+      "best_moves": ["Nf3"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nf6": {
+      "best_moves": ["Nxf6+", "Bd3"]
+    },
+    
+    "e4 e6 d4 d5 Nd2": {
+      "best_moves": ["Nf6", "c5", "Nc6"],
+      "variations": {
+        "Nf6": "Tarrasch Main",
+        "c5": "Tarrasch Open",
+        "Nc6": "Guimard Variation"
+      },
+      "note": "Tarrasch Variation - flexible approach"
+    },
+    
+    "e4 e6 d4 d5 Nd2 Nf6": {
+      "best_moves": ["e5", "exd5", "Bd3"]
+    },
+    
+    "e4 e6 d4 d5 Nd2 Nf6 e5": {
+      "best_moves": ["Nfd7"]
+    },
+    
+    "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7": {
+      "best_moves": ["Bd3", "f4", "c3"]
+    },
+    
+    "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3": {
+      "best_moves": ["c5"]
+    },
+    
+    "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5": {
+      "best_moves": ["c3"]
+    },
+    
+    "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5 c3": {
+      "best_moves": ["Nc6"]
+    },
+    
+    "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5 c3 Nc6": {
+      "best_moves": ["Ne2", "Ngf3"]
+    },
+    
+    "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5 c3 Nc6 Ne2": {
+      "best_moves": ["cxd4", "Qb6", "f6"]
+    },
+    
+    "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 f4": {
+      "best_moves": ["c5"]
+    },
+    
+    "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 f4 c5 c3": {
+      "best_moves": ["Nc6"]
+    },
+    
+    "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 c3": {
+      "best_moves": ["c5"]
+    },
+    
+    "e4 e6 d4 d5 Nd2 Nf6 exd5": {
+      "best_moves": ["exd5"]
+    },
+    
+    "e4 e6 d4 d5 Nd2 Nf6 exd5 exd5": {
+      "best_moves": ["Ngf3", "Bd3"]
+    },
+    
+    "e4 e6 d4 d5 Nd2 Nf6 Bd3": {
+      "best_moves": ["c5"]
+    },
+    
+    "e4 e6 d4 d5 Nd2 c5": {
+      "best_moves": ["exd5", "Ngf3"],
+      "note": "Tarrasch Open Variation"
+    },
+    
+    "e4 e6 d4 d5 Nd2 c5 exd5": {
+      "best_moves": ["exd5", "Qxd5"]
+    },
+    
+    "e4 e6 d4 d5 Nd2 c5 exd5 exd5": {
+      "best_moves": ["Ngf3", "Bb5+"]
+    },
+    
+    "e4 e6 d4 d5 Nd2 c5 exd5 exd5 Ngf3": {
+      "best_moves": ["Nc6", "cxd4"]
+    },
+    
+    "e4 e6 d4 d5 Nd2 c5 exd5 exd5 Ngf3 Nc6": {
+      "best_moves": ["Bb5"]
+    },
+    
+    "e4 e6 d4 d5 Nd2 c5 exd5 exd5 Ngf3 Nc6 Bb5": {
+      "best_moves": ["Bd6", "Nf6"]
+    },
+    
+    "e4 e6 d4 d5 Nd2 c5 exd5 Qxd5": {
+      "best_moves": ["Ngf3", "dxc5"]
+    },
+    
+    "e4 e6 d4 d5 Nd2 c5 Ngf3": {
+      "best_moves": ["Nc6", "cxd4"]
+    },
+    
+    "e4 e6 d4 d5 Nd2 Nc6": {
+      "best_moves": ["Ngf3", "c3"],
+      "note": "Guimard Variation"
+    },
+    
+    "e4 e6 d4 d5 e5": {
+      "best_moves": ["c5"],
+      "note": "Advance Variation - space advantage"
+    },
+    
+    "e4 e6 d4 d5 e5 c5": {
+      "best_moves": ["c3", "Nf3", "dxc5"]
+    },
+    
+    "e4 e6 d4 d5 e5 c5 c3": {
+      "best_moves": ["Nc6", "Qb6", "Bd7"]
+    },
+    
+    "e4 e6 d4 d5 e5 c5 c3 Nc6": {
+      "best_moves": ["Nf3", "Be3"]
+    },
+    
+    "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3": {
+      "best_moves": ["Qb6", "Bd7", "Nh6"]
+    },
+    
+    "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6": {
+      "best_moves": ["a3", "Bd3"]
+    },
+    
+    "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Bd7": {
+      "best_moves": ["Be2", "Bd3"]
+    },
+    
+    "e4 e6 d4 d5 e5 c5 c3 Qb6": {
+      "best_moves": ["Nf3"]
+    },
+    
+    "e4 e6 d4 d5 e5 c5 c3 Qb6 Nf3": {
+      "best_moves": ["Nc6", "Bd7"]
+    },
+    
+    "e4 e6 d4 d5 e5 c5 Nf3": {
+      "best_moves": ["Nc6", "cxd4"]
+    },
+    
+    "e4 e6 d4 d5 e5 c5 Nf3 Nc6": {
+      "best_moves": ["Bd3", "c3", "Nc3"]
+    },
+    
+    "e4 e6 d4 d5 e5 c5 Nf3 Nc6 Bd3": {
+      "best_moves": ["cxd4"]
+    },
+    
+    "e4 e6 d4 d5 e5 c5 dxc5": {
+      "best_moves": ["Bxc5", "Nc6"]
+    },
+    
+    "e4 e6 d4 d5 exd5": {
+      "best_moves": ["exd5"],
+      "note": "Exchange Variation - symmetrical structure"
+    },
+    
+    "e4 e6 d4 d5 exd5 exd5": {
+      "best_moves": ["Nf3", "Bd3", "c4"]
+    },
+    
+    "e4 e6 d4 d5 exd5 exd5 Nf3": {
+      "best_moves": ["Nf6", "Bd6", "Nc6"]
+    },
+    
+    "e4 e6 d4 d5 exd5 exd5 Nf3 Nf6": {
+      "best_moves": ["Bd3", "Bg5", "c4"]
+    },
+    
+    "e4 e6 d4 d5 exd5 exd5 Nf3 Nf6 Bd3": {
+      "best_moves": ["Bd6", "Be7", "c6"]
+    },
+    
+    "e4 e6 d4 d5 exd5 exd5 Nf3 Nf6 Bd3 Bd6": {
+      "best_moves": ["O-O", "c4"]
+    },
+    
+    "e4 e6 d4 d5 exd5 exd5 Nf3 Nf6 Bd3 Bd6 O-O": {
+      "best_moves": ["O-O"]
+    },
+    
+    "e4 e6 d4 d5 exd5 exd5 Nf3 Nf6 Bd3 Bd6 O-O O-O": {
+      "best_moves": ["Bg5", "Nc3", "c4"]
+    },
+    
+    "e4 e6 d4 d5 exd5 exd5 Nf3 Nf6 Bg5": {
+      "best_moves": ["Be7", "Bd6"]
+    },
+    
+    "e4 e6 d4 d5 exd5 exd5 Nf3 Nf6 Bg5 Be7": {
+      "best_moves": ["Bd3"]
+    },
+    
+    "e4 e6 d4 d5 exd5 exd5 Nf3 Nf6 c4": {
+      "best_moves": ["dxc4", "Bb4+"]
+    },
+    
+    "e4 e6 d4 d5 exd5 exd5 Nf3 Bd6": {
+      "best_moves": ["Bd3", "c4"]
+    },
+    
+    "e4 e6 d4 d5 exd5 exd5 Nf3 Nc6": {
+      "best_moves": ["Bb5", "Bd3"]
+    },
+    
+    "e4 e6 d4 d5 exd5 exd5 Bd3": {
+      "best_moves": ["Bd6", "Nf6", "Nc6"]
+    },
+    
+    "e4 e6 d4 d5 exd5 exd5 Bd3 Bd6": {
+      "best_moves": ["Nc3", "Nf3"]
+    },
+    
+    "e4 e6 d4 d5 exd5 exd5 c4": {
+      "best_moves": ["Nf6", "dxc4"]
+    },
+    
+    "e4 e6 d4 d5 exd5 exd5 c4 Nf6": {
+      "best_moves": ["Nc3"]
+    },
+    
+    "e4 e6 d4 d5 exd5 exd5 c4 Nf6 Nc3": {
+      "best_moves": ["Be7", "Bb4", "c6"]
+    },
+    
+    "e4 e6 d4 d5 exd5 exd5 c4 dxc4": {
+      "best_moves": ["Bxc4"]
+    },
+    
+    "e4 e6 d4 d5 Be3": {
+      "best_moves": ["dxe4", "Nf6"],
+      "note": "Reversed London System"
+    },
+    
+    "e4 e6 d4 d5 Bd3": {
+      "best_moves": ["c5", "Nf6", "dxe4"]
+    },
+    
+    "e4 e6 d4 d5 Nf3": {
+      "best_moves": ["Nf6", "dxe4"]
+    },
+    
+    "e4 e6 d4 d5 Nf3 Nf6": {
+      "best_moves": ["Nc3", "e5", "exd5"]
+    },
+    
+    "e4 e6 d4 d5 Nf3 dxe4": {
+      "best_moves": ["Ng5"]
+    },
+    
+    "e4 e6 d4 d5 c4": {
+      "best_moves": ["dxe4", "dxc4"],
+      "note": "Diemer-Duhm Gambit"
+    },
+    
+    "e4 e6 d4 d5 f3": {
+      "best_moves": ["dxe4", "c5"],
+      "note": "Unusual advance"
+    },
+    
+    "e4 e6 d3": {
+      "best_moves": ["d5", "c5", "Nf6"],
+      "note": "King's Indian Attack"
+    },
+    
+    "e4 e6 d3 d5": {
+      "best_moves": ["Nd2", "Nf3", "Qe2"]
+    },
+    
+    "e4 e6 d3 d5 Nd2": {
+      "best_moves": ["Nf6", "c5", "dxe4"]
+    },
+    
+    "e4 e6 d3 d5 Nd2 Nf6": {
+      "best_moves": ["Ngf3", "g3"]
+    },
+    
+    "e4 e6 d3 d5 Nd2 Nf6 Ngf3": {
+      "best_moves": ["dxe4", "c5"]
+    },
+    
+    "e4 e6 d3 d5 Nd2 Nf6 g3": {
+      "best_moves": ["c5", "dxe4"]
+    },
+    
+    "e4 e6 d3 d5 Nf3": {
+      "best_moves": ["Nf6"]
+    },
+    
+    "e4 e6 d3 d5 Nf3 Nf6": {
+      "best_moves": ["Nbd2", "Qe2"]
+    },
+    
+    "e4 e6 d3 d5 Qe2": {
+      "best_moves": ["Nf6", "c5"]
+    },
+    
+    "e4 e6 d3 c5": {
+      "best_moves": ["Nf3", "Nd2"]
+    },
+    
+    "e4 e6 Nf3": {
+      "best_moves": ["d5"],
+      "note": "Réti approach"
+    },
+    
+    "e4 e6 Nf3 d5": {
+      "best_moves": ["Nc3", "e5", "d3"]
+    },
+    
+    "e4 e6 Nf3 d5 Nc3": {
+      "best_moves": ["Nf6", "Bb4", "dxe4"]
+    },
+    
+    "e4 e6 Nf3 d5 Nc3 Nf6": {
+      "best_moves": ["e5", "exd5"]
+    },
+    
+    "e4 e6 Nf3 d5 Nc3 Bb4": {
+      "best_moves": ["e5"]
+    },
+    
+    "e4 e6 Nf3 d5 Nc3 dxe4": {
+      "best_moves": ["Nxe4"]
+    },
+    
+    "e4 e6 Nf3 d5 e5": {
+      "best_moves": ["c5"]
+    },
+    
+    "e4 e6 Nf3 d5 e5 c5": {
+      "best_moves": ["c3", "d4"]
+    },
+    
+    "e4 e6 Nf3 d5 d3": {
+      "best_moves": ["Nf6", "c5"]
+    },
+    
+    "e4 e6 Nf3 d5 d3 Nf6": {
+      "best_moves": ["Nbd2", "Qe2"]
+    },
+    
+    "e4 e6 Nc3": {
+      "best_moves": ["d5"],
+      "note": "Two Knights Variation"
+    },
+    
+    "e4 e6 Nc3 d5": {
+      "best_moves": ["d4", "e5", "exd5"]
+    },
+    
+    "e4 e6 Nc3 d5 d4": {
+      "best_moves": ["Nf6", "Bb4", "dxe4"]
+    },
+    
+    "e4 e6 Nc3 d5 e5": {
+      "best_moves": ["c5", "d4"]
+    },
+    
+    "e4 e6 Nc3 d5 exd5": {
+      "best_moves": ["exd5"]
+    },
+    
+    "e4 e6 b3": {
+      "best_moves": ["d5"],
+      "note": "Larsen's Opening"
+    },
+    
+    "e4 e6 g3": {
+      "best_moves": ["d5"],
+      "note": "Fianchetto approach"
+    },
+    
+    "e4 e6 c4": {
+      "best_moves": ["d5"],
+      "note": "English hybrid"
+    },
+    
+    "e4 e6 f4": {
+      "best_moves": ["d5"],
+      "note": "Bird's approach"
+    },
+    
+    "e4 e6 Be2": {
+      "best_moves": ["d5"],
+      "note": "Quiet development"
+    },
+    
+    "e4 e6 Qe2": {
+      "best_moves": ["e5", "d5", "c5"],
+      "note": "Chigorin Variation"
+    },
+    
+    "e4 e6 Qe2 e5": {
+      "best_moves": ["Nf3"]
+    },
+    
+    "e4 e6 Qe2 c5": {
+      "best_moves": ["Nf3"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 c5": {
+      "best_moves": ["exd5", "Nf3"],
+      "note": "French-Sicilian hybrid"
+    },
+    
+    "e4 e6 d4 d5 Nc3 c5 exd5": {
+      "best_moves": ["exd5"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 c5 exd5 exd5 Nf3": {
+      "best_moves": ["Nc6"]
+    },
+    
+    "e4 e6 d4 d5 Nc3 c5 Nf3": {
+      "best_moves": ["cxd4", "Nc6"]
+    },
+    
+    "e4 e6 d4 Be7": {
+      "best_moves": ["Nf3", "Bd3"],
+      "note": "Unusual move order"
+    },
+    
+    "e4 e6 d4 c5": {
+      "best_moves": ["d5", "Nf3"],
+      "note": "Sicilian-French hybrid"
+    },
+    
+    "e4 e6 d4 c5 d5": {
+      "best_moves": ["exd5"]
+    },
+    
+    "e4 e6 d4 c5 Nf3": {
+      "best_moves": ["cxd4"]
+    },
+    
+    "e4 e6 d4 b6": {
+      "best_moves": ["Nf3", "Bd3"],
+      "note": "Owen's Defense"
+    },
+    
+    "e4 e6 d4 a6": {
+      "best_moves": ["Nf3", "c4"],
+      "note": "St. George Defense"
+    },
+    
+    "e4 e6 d4 Nc6": {
+      "best_moves": ["d5", "Nf3"],
+      "note": "Nimzowitsch Defense"
+    },
+    
+    "e4 e6 d4 Nf6": {
+      "best_moves": ["e5", "Nc3"],
+      "note": "Scandinavian-French hybrid"
+    },
+    
+    "e4 e6 d4 d6": {
+      "best_moves": ["Nf3", "Nc3"],
+      "note": "Pirc-French hybrid"
+    },
+    
+    "e4 e6 d4 f5": {
+      "best_moves": ["exf5"],
+      "note": "Unusual gambit"
+    },
+    
+    "e4 e6 d4 g6": {
+      "best_moves": ["Nf3", "Nc3"],
+      "note": "Modern-French hybrid"
+    }
+  }
+}

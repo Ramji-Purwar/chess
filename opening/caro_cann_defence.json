@@ -1,0 +1,231 @@
+{
+  "opening_name": "Caro-Kann Defense",
+  "eco_code": "B10-B19",
+  "description": "A highly respected and solid defense to 1.e4, the Caro-Kann aims for a sound positional game. It avoids the sharp tactical complexities of openings like the Sicilian, instead focusing on creating a solid pawn structure and preparing to challenge White's central control. It has been a reliable weapon for many World Champions and remains popular at all levels of play. ",
+  "main_line": "1.e4 c6",
+  "book": {
+    "e4": {
+      "best_moves": ["c5", "e5", "c6", "e6"]
+    },
+    "e4 c6": {
+      "best_moves": ["d4", "Nf3", "Nc3", "c4", "f3", "d3", "Bc4"],
+      "variations": {
+        "d4": "Main Lines ",
+        "Nf3": "Two Knights Variation ",
+        "c4": "Accelerated Panov Attack ",
+        "f3": "Fantasy Variation ",
+        "d3": "King's Indian Attack Setup ",
+        "Bc4": "Hillbilly Attack "
+      },
+      "note": "Caro-Kann Defense - a rock-solid defense. "
+    },
+    "e4 c6 d4": {
+      "best_moves": ["d5"]
+    },
+    "e4 c6 d4 d5": {
+      "best_moves": ["Nc3", "e5", "exd5", "Nd2", "f3"],
+      "variations": {
+        "Nc3": "Classical & Karpov Variations ",
+        "e5": "Advance Variation ",
+        "exd5": "Exchange Variation / Panov-Botvinnik Attack ",
+        "Nd2": "Karpov Variation (often transposes to Nc3 lines) ",
+        "f3": "Fantasy Variation "
+      }
+    },
+    "e4 c6 d4 d5 Nc3": {
+      "best_moves": ["dxe4"]
+    },
+    "e4 c6 d4 d5 Nc3 dxe4": {
+      "best_moves": ["Nxe4"]
+    },
+    "e4 c6 d4 d5 Nc3 dxe4 Nxe4": {
+      "best_moves": ["Bf5", "Nd7", "Nf6"],
+      "variations": {
+        "Bf5": "Classical Variation ",
+        "Nd7": "Karpov / Smyslov Variation ",
+        "Nf6": "Bronstein-Larsen Variation "
+      },
+      "note": "The main branching point of the Caro-Kann. "
+    },
+    "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Bf5": {
+      "best_moves": ["Ng3", "Nf6"]
+    },
+    "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Bf5 Ng3": {
+      "best_moves": ["Bg6"]
+    },
+    "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Bf5 Ng3 Bg6": {
+      "best_moves": ["h4", "Nf3", "f4", "Bc4"]
+    },
+    "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Bf5 Ng3 Bg6 h4": {
+      "best_moves": ["h6"]
+    },
+    "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Bf5 Ng3 Bg6 h4 h6": {
+      "best_moves": ["Nf3", "f3", "Nh3"]
+    },
+    "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Bf5 Ng3 Bg6 h4 h6 Nf3": {
+      "best_moves": ["Nd7", "Nf6"]
+    },
+    "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Bf5 Ng3 Bg6 h4 h6 Nf3 Nd7": {
+      "best_moves": ["h5", "Bd3", "c3"]
+    },
+    "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Bf5 Ng3 Bg6 h4 h6 Nf3 Nd7 h5": {
+      "best_moves": ["Bh7"]
+    },
+    "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Bf5 Ng3 Bg6 h4 h6 Nf3 Nd7 h5 Bh7": {
+      "best_moves": ["Bd3", "c4"]
+    },
+    "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Bf5 Ng3 Bg6 h4 h6 Nf3 Nd7 h5 Bh7 Bd3": {
+      "best_moves": ["Bxd3"]
+    },
+    "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Bf5 Ng3 Bg6 h4 h6 Nf3 Nd7 h5 Bh7 Bd3 Bxd3": {
+      "best_moves": ["Qxd3"]
+    },
+    "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Nd7": {
+      "best_moves": ["Ng5", "Nf3", "Bc4", "Qe2", "Nf6"],
+      "variations": {
+        "Ng5": "Modern Main Line ",
+        "Nf3": "Positional Line ",
+        "Bc4": "Traditional Line ",
+        "Nf6": "Gurgenidze System "
+      },
+      "note": "Karpov Variation "
+    },
+    "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Nd7 Ng5": {
+      "best_moves": ["Ngf6", "h6"]
+    },
+    "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Nd7 Ng5 Ngf6": {
+      "best_moves": ["Bd3"]
+    },
+    "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Nd7 Nf3": {
+      "best_moves": ["Ngf6"]
+    },
+    "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Nd7 Nf3 Ngf6": {
+      "best_moves": ["Nxf6+"]
+    },
+    "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Nd7 Bc4": {
+      "best_moves": ["Ngf6"]
+    },
+    "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Nd7 Bc4 Ngf6": {
+      "best_moves": ["Ng5", "Nxf6+"]
+    },
+    "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Nf6": {
+      "best_moves": ["Nxf6+"]
+    },
+    "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Nf6 Nxf6+": {
+      "best_moves": ["exf6", "gxf6"]
+    },
+    "e4 c6 d4 d5 e5": {
+      "best_moves": ["Bf5", "c5"],
+      "note": "Advance Variation "
+    },
+    "e4 c6 d4 d5 e5 Bf5": {
+      "best_moves": ["Nf3", "Nc3", "h4", "c4", "g4", "Bd3"],
+      "variations": {
+        "Nf3": "Short Variation ",
+        "h4": "Tal Variation ",
+        "g4": "Botvinnik-Carls Attack "
+      }
+    },
+    "e4 c6 d4 d5 e5 Bf5 Nf3": {
+      "best_moves": ["e6"]
+    },
+    "e4 c6 d4 d5 e5 Bf5 Nf3 e6": {
+      "best_moves": ["Be2"]
+    },
+    "e4 c6 d4 d5 e5 Bf5 Nf3 e6 Be2": {
+      "best_moves": ["c5", "Nd7", "Ne7"]
+    },
+    "e4 c6 d4 d5 e5 Bf5 Nc3": {
+      "best_moves": ["e6", "h6", "Qb6"]
+    },
+    "e4 c6 d4 d5 e5 Bf5 h4": {
+      "best_moves": ["h6", "h5", "Qb6"]
+    },
+    "e4 c6 d4 d5 e5 c5": {
+      "best_moves": ["dxc5", "c3"]
+    },
+    "e4 c6 d4 d5 e5 c5 dxc5": {
+      "best_moves": ["Nc6", "e6"]
+    },
+    "e4 c6 d4 d5 exd5": {
+      "best_moves": ["cxd5"],
+      "note": "Exchange Variation "
+    },
+    "e4 c6 d4 d5 exd5 cxd5": {
+      "best_moves": ["c4", "Bd3", "Nf3"],
+      "variations": {
+        "c4": "Panov-Botvinnik Attack ",
+        "Bd3": "Quiet System "
+      }
+    },
+    "e4 c6 d4 d5 exd5 cxd5 c4": {
+      "best_moves": ["Nf6", "e6", "Nc6"],
+      "note": "Panov-Botvinnik Attack "
+    },
+    "e4 c6 d4 d5 exd5 cxd5 c4 Nf6": {
+      "best_moves": ["Nc3"]
+    },
+    "e4 c6 d4 d5 exd5 cxd5 c4 Nf6 Nc3": {
+      "best_moves": ["e6", "Nc6", "g6"]
+    },
+    "e4 c6 d4 d5 exd5 cxd5 c4 Nf6 Nc3 e6": {
+      "best_moves": ["Nf3", "cxd5"]
+    },
+    "e4 c6 d4 d5 exd5 cxd5 c4 Nf6 Nc3 Nc6": {
+      "best_moves": ["Bg5", "Nf3"]
+    },
+    "e4 c6 d4 d5 exd5 cxd5 c4 Nf6 Nc3 g6": {
+      "best_moves": ["cxd5", "Nf3"]
+    },
+    "e4 c6 d4 d5 exd5 cxd5 Bd3": {
+      "best_moves": ["Nc6"]
+    },
+    "e4 c6 d4 d5 exd5 cxd5 Bd3 Nc6": {
+      "best_moves": ["c3"]
+    },
+    "e4 c6 d4 d5 exd5 cxd5 Bd3 Nc6 c3": {
+      "best_moves": ["Nf6", "Qc7"]
+    },
+    "e4 c6 c4": {
+      "best_moves": ["d5"],
+      "note": "Accelerated Panov Attack "
+    },
+    "e4 c6 c4 d5": {
+      "best_moves": ["exd5", "cxd5"]
+    },
+    "e4 c6 c4 d5 exd5": {
+      "best_moves": ["cxd5"]
+    },
+    "e4 c6 Nf3": {
+      "best_moves": ["d5"]
+    },
+    "e4 c6 Nf3 d5": {
+      "best_moves": ["Nc3", "e5", "exd5"],
+      "note": "Two Knights Variation "
+    },
+    "e4 c6 Nf3 d5 Nc3": {
+      "best_moves": ["dxe4", "Bg4"]
+    },
+    "e4 c6 f3": {
+      "best_moves": ["d5"],
+      "note": "Fantasy Variation "
+    },
+    "e4 c6 f3 d5": {
+      "best_moves": ["d4", "e5"]
+    },
+    "e4 c6 d3": {
+      "best_moves": ["d5"],
+      "note": "King's Indian Attack setup "
+    },
+    "e4 c6 d3 d5": {
+      "best_moves": ["Nd2", "Qe2"]
+    },
+    "e4 c6 Bc4": {
+      "best_moves": ["d5"],
+      "note": "Hillbilly Attack "
+    },
+    "e4 c6 Bc4 d5": {
+      "best_moves": ["exd5"]
+    }
+  }
+}

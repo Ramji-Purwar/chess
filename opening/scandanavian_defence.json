@@ -1,0 +1,138 @@
+{
+  "opening_name": "Scandinavian Defense (Center Counter Defense)",
+  "eco_code": "B01",
+  "description": "The Scandinavian Defense, also known as the Center Counter, is a direct and ambitious reply to 1.e4, immediately challenging White's central pawn. Black often recaptures with the queen, leading to positions where the queen can become a target but also an active piece. While once considered dubious, modern theory has found it to be a solid and respectable opening, popular at all levels for players looking to take the initiative and create unbalanced positions from the start.",
+  "main_line": "1.e4 d5",
+  "book": {
+    "e4": {
+      "best_moves": ["d5", "e5", "c5", "e6", "c6"]
+    },
+    "e4 d5": {
+      "best_moves": ["exd5"],
+      "note": "This is White's most popular and best response."
+    },
+    "e4 d5 exd5": {
+      "best_moves": ["Qxd5", "Nf6"],
+      "variations": {
+        "Qxd5": "Main Line with Queen Recapture",
+        "Nf6": "Modern Variation with Knight Recapture"
+      }
+    },
+    "e4 d5 exd5 Qxd5": {
+      "best_moves": ["Nc3"],
+      "note": "The most common move, developing a piece and attacking the queen."
+    },
+    "e4 d5 exd5 Qxd5 Nc3": {
+      "best_moves": ["Qa5", "Qd8", "Qd6"],
+      "variations": {
+        "Qa5": "The most popular retreat, pinning the knight.",
+        "Qd8": "A safer, more passive retreat.",
+        "Qd6": "A flexible retreat, keeping an eye on d4 and preparing to develop."
+      }
+    },
+    "e4 d5 exd5 Qxd5 Nc3 Qa5": {
+      "best_moves": ["d4", "Nf3", "g3"]
+    },
+    "e4 d5 exd5 Qxd5 Nc3 Qa5 d4": {
+      "best_moves": ["Nf6", "c6"]
+    },
+    "e4 d5 exd5 Qxd5 Nc3 Qa5 d4 Nf6": {
+      "best_moves": ["Nf3", "Bd2"]
+    },
+    "e4 d5 exd5 Qxd5 Nc3 Qa5 d4 Nf6 Nf3": {
+      "best_moves": ["c6", "Bg4", "Bf5"]
+    },
+    "e4 d5 exd5 Qxd5 Nc3 Qa5 d4 Nf6 Nf3 c6": {
+      "best_moves": ["Bc4", "Ne5", "Bd2"]
+    },
+    "e4 d5 exd5 Qxd5 Nc3 Qa5 d4 Nf6 Nf3 c6 Bc4": {
+      "best_moves": ["Bf5", "Bg4"]
+    },
+    "e4 d5 exd5 Qxd5 Nc3 Qa5 d4 Nf6 Nf3 c6 Bc4 Bf5": {
+      "best_moves": ["Bd2", "O-O", "Ne5"]
+    },
+    "e4 d5 exd5 Qxd5 Nc3 Qa5 d4 Nf6 Nf3 c6 Ne5": {
+      "best_moves": ["Bf5", "Nbd7"]
+    },
+    "e4 d5 exd5 Qxd5 Nc3 Qa5 d4 Nf6 Nf3 Bg4": {
+      "best_moves": ["h3"]
+    },
+    "e4 d5 exd5 Qxd5 Nc3 Qa5 d4 Nf6 Bd2": {
+      "best_moves": ["Bg4"]
+    },
+    "e4 d5 exd5 Qxd5 Nc3 Qd8": {
+      "best_moves": ["d4"]
+    },
+    "e4 d5 exd5 Qxd5 Nc3 Qd8 d4": {
+      "best_moves": ["Nf6", "e5"]
+    },
+    "e4 d5 exd5 Qxd5 Nc3 Qd8 d4 Nf6": {
+      "best_moves": ["Nf3"]
+    },
+    "e4 d5 exd5 Qxd5 Nc3 Qd8 d4 Nf6 Nf3": {
+      "best_moves": ["Bg5", "Bf4"]
+    },
+    "e4 d5 exd5 Qxd5 Nc3 Qd8 d4 Nf6 Nf3 Bg5": {
+      "best_moves": ["e6"]
+    },
+    "e4 d5 exd5 Qxd5 Nc3 Qd6": {
+      "best_moves": ["d4", "Nf3"]
+    },
+    "e4 d5 exd5 Qxd5 Nc3 Qd6 d4": {
+      "best_moves": ["Nf6"]
+    },
+    "e4 d5 exd5 Qxd5 Nc3 Qd6 d4 Nf6": {
+      "best_moves": ["Nf3", "Bc4"]
+    },
+    "e4 d5 exd5 Qxd5 Nc3 Qd6 d4 Nf6 Nf3": {
+      "best_moves": ["a6", "c6", "g6", "Bg4"]
+    },
+    "e4 d5 exd5 Qxd5 Nc3 Qd6 d4 Nf6 Nf3 a6": {
+      "best_moves": ["g3"]
+    },
+    "e4 d5 exd5 Nf6": {
+      "best_moves": ["d4", "c4", "Nf3"],
+      "variations": {
+        "d4": "Main Line Modern Variation",
+        "c4": "Mieses Gambit",
+        "Nf3": "Transposes to other lines"
+      },
+      "note": "Modern Variation"
+    },
+    "e4 d5 exd5 Nf6 d4": {
+      "best_moves": ["Nxd5", "Bg4"]
+    },
+    "e4 d5 exd5 Nf6 d4 Nxd5": {
+      "best_moves": ["c4", "Nf3"]
+    },
+    "e4 d5 exd5 Nf6 d4 Nxd5 c4": {
+      "best_moves": ["Nb6", "Nf6"]
+    },
+    "e4 d5 exd5 Nf6 d4 Nxd5 c4 Nb6": {
+      "best_moves": ["Nf3", "Nc3"]
+    },
+    "e4 d5 exd5 Nf6 d4 Nxd5 c4 Nb6 Nf3": {
+      "best_moves": ["g6"]
+    },
+    "e4 d5 exd5 Nf6 d4 Nxd5 c4 Nb6 Nf3 g6": {
+      "best_moves": ["Nc3"]
+    },
+    "e4 d5 exd5 Nf6 d4 Bg4": {
+      "best_moves": ["Be2", "f3"]
+    },
+    "e4 d5 exd5 Nf6 c4": {
+      "best_moves": ["dxc4"],
+      "note": "Mieses Gambit"
+    },
+    "e4 d5 exd5 Nf6 c4 dxc4": {
+      "best_moves": ["Bxc4"]
+    },
+    "e4 d5 exd5 Nf6 c4 e6": {
+      "best_moves": ["dxe6"],
+      "note": "Icelandic-Palme Gambit"
+    },
+    "e4 d5 exd5 Nf6 Nf3": {
+      "best_moves": ["Nxd5", "Bg4"]
+    }
+  }
+}

@@ -1,0 +1,1385 @@
+{
+  "opening_name": "Sicilian Defense",
+  "eco_code": "B20-B99",
+  "description": "The most popular and best-scoring response to 1.e4. Black immediately fights for the center and creates an asymmetrical pawn structure, leading to dynamic and complex positions with winning chances for both sides.",
+  "main_line": "1.e4 c5",
+  "book": {
+    "start": {
+      "best_moves": [
+        "e4"
+      ]
+    },
+    "e4": {
+      "best_moves": [
+        "c5",
+        "e5",
+        "e6"
+      ]
+    },
+    "e4 c5": {
+      "best_moves": [
+        "Nf3",
+        "Nc3",
+        "d4",
+        "c3"
+      ],
+      "variations": {
+        "Nf3": "Open Sicilian",
+        "Nc3": "Closed Sicilian",
+        "d4": "Smith-Morra Gambit",
+        "c3": "Alapin Variation"
+      },
+      "note": "Sicilian Defense - most popular response to 1.e4"
+    },
+    "e4 c5 Nf3": {
+      "best_moves": [
+        "d6",
+        "Nc6",
+        "e6",
+        "g6"
+      ],
+      "variations": {
+        "d6": "Classical/Najdorf setup",
+        "Nc6": "Old Sicilian",
+        "e6": "French-Sicilian",
+        "g6": "Hyperaccelerated Dragon"
+      },
+      "note": "Open Sicilian - main line"
+    },
+    "e4 c5 Nf3 d6": {
+      "best_moves": [
+        "d4"
+      ],
+      "note": "Preparing to open the center"
+    },
+    "e4 c5 Nf3 d6 d4": {
+      "best_moves": [
+        "cxd4"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4": {
+      "best_moves": [
+        "Nxd4"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4": {
+      "best_moves": [
+        "Nf6",
+        "a6",
+        "e6",
+        "g6"
+      ],
+      "variations": {
+        "Nf6": "Classical/Dragon/Najdorf",
+        "a6": "Najdorf Variation",
+        "e6": "Scheveningen/Taimanov",
+        "g6": "Dragon Variation"
+      },
+      "note": "Key position - Black chooses variation"
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6": {
+      "best_moves": [
+        "Nc3",
+        "f3"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3": {
+      "best_moves": [
+        "a6",
+        "g6",
+        "e6",
+        "Nc6"
+      ],
+      "variations": {
+        "a6": "Najdorf Variation",
+        "g6": "Dragon Variation",
+        "e6": "Scheveningen/Classical",
+        "Nc6": "Classical Variation"
+      }
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6": {
+      "best_moves": [
+        "Be3",
+        "Bg5",
+        "Be2",
+        "f3",
+        "g3"
+      ],
+      "variations": {
+        "Be3": "English Attack",
+        "Bg5": "Main Line Najdorf",
+        "Be2": "Modern Najdorf",
+        "f3": "Amsterdam Variation",
+        "g3": "Fianchetto Variation"
+      },
+      "note": "Najdorf Variation - most popular Sicilian"
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Be3": {
+      "best_moves": [
+        "e5",
+        "e6",
+        "Ng4"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Be3 e5": {
+      "best_moves": [
+        "Nb3",
+        "Nf3"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Be3 e5 Nb3": {
+      "best_moves": [
+        "Be6",
+        "Be7"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Be3 e5 Nb3 Be6": {
+      "best_moves": [
+        "f3",
+        "Qd2"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Be3 e5 Nb3 Be6 f3": {
+      "best_moves": [
+        "Be7",
+        "Nbd7"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Be3 e5 Nb3 Be6 f3 Be7": {
+      "best_moves": [
+        "Qd2"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Be3 e5 Nb3 Be6 f3 Be7 Qd2": {
+      "best_moves": [
+        "O-O",
+        "Nbd7"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Be3 e5 Nb3 Be6 f3 Be7 Qd2 O-O": {
+      "best_moves": [
+        "O-O-O"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Be3 e5 Nb3 Be6 f3 Be7 Qd2 O-O O-O-O": {
+      "best_moves": [
+        "Nbd7",
+        "Qc7"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Be3 e6": {
+      "best_moves": [
+        "f3",
+        "Be2",
+        "g4"
+      ],
+      "note": "Najdorf with ...e6 - Scheveningen structure"
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Be3 e6 f3": {
+      "best_moves": [
+        "b5",
+        "Be7",
+        "Qc7"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Be3 e6 f3 b5": {
+      "best_moves": [
+        "Qd2",
+        "g4"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Be3 e6 g4": {
+      "best_moves": [
+        "e5",
+        "h6",
+        "b5"
+      ],
+      "note": "English Attack with g4"
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Be3 Ng4": {
+      "best_moves": [
+        "Bg5",
+        "Bb6"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Bg5": {
+      "best_moves": [
+        "e6",
+        "Nbd7",
+        "e5"
+      ],
+      "note": "Main Line Najdorf with Bg5"
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Bg5 e6": {
+      "best_moves": [
+        "f4",
+        "Qf3",
+        "Be2"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Bg5 e6 f4": {
+      "best_moves": [
+        "Be7",
+        "Qb6",
+        "Nbd7"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Bg5 e6 f4 Be7": {
+      "best_moves": [
+        "Qf3",
+        "Qe2"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Bg5 e6 f4 Be7 Qf3": {
+      "best_moves": [
+        "Qc7",
+        "h6",
+        "Nbd7"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Bg5 e6 f4 Be7 Qf3 Qc7": {
+      "best_moves": [
+        "O-O-O",
+        "Bd3"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Bg5 e6 f4 Be7 Qf3 Qc7 O-O-O": {
+      "best_moves": [
+        "Nbd7",
+        "O-O"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Bg5 e6 f4 Be7 Qf3 h6": {
+      "best_moves": [
+        "Bh4",
+        "Bxf6"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Bg5 e6 f4 Qb6": {
+      "best_moves": [
+        "Nb3",
+        "Qd2"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Bg5 e6 f4 Qb6 Nb3": {
+      "best_moves": [
+        "Be7",
+        "Qe3"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Bg5 Nbd7": {
+      "best_moves": [
+        "Bc4",
+        "Qe2"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Bg5 e5": {
+      "best_moves": [
+        "Bxf6",
+        "Nf5"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Be2": {
+      "best_moves": [
+        "e5",
+        "e6",
+        "g6"
+      ],
+      "note": "Modern/Positional Najdorf"
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Be2 e5": {
+      "best_moves": [
+        "Nb3",
+        "Nf3"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 f3": {
+      "best_moves": [
+        "e5",
+        "e6"
+      ],
+      "note": "Amsterdam Variation"
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 f3 e5": {
+      "best_moves": [
+        "Nb3"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 g3": {
+      "best_moves": [
+        "e5",
+        "e6"
+      ],
+      "note": "Fianchetto Najdorf"
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6": {
+      "best_moves": [
+        "Be3",
+        "Be2",
+        "f3",
+        "Bc4"
+      ],
+      "variations": {
+        "Be3": "Classical Dragon",
+        "Be2": "Fianchetto Dragon",
+        "f3": "Yugoslav Attack",
+        "Bc4": "Levenfish Attack"
+      },
+      "note": "Dragon Variation - sharp and theoretical"
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Be3": {
+      "best_moves": [
+        "Bg7"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Be3 Bg7": {
+      "best_moves": [
+        "f3",
+        "Be2",
+        "Qd2"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Be3 Bg7 f3": {
+      "best_moves": [
+        "O-O",
+        "Nc6"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Be3 Bg7 f3 O-O": {
+      "best_moves": [
+        "Qd2"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Be3 Bg7 f3 O-O Qd2": {
+      "best_moves": [
+        "Nc6"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Be3 Bg7 f3 O-O Qd2 Nc6": {
+      "best_moves": [
+        "Bc4",
+        "O-O-O"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Be3 Bg7 f3 O-O Qd2 Nc6 Bc4": {
+      "best_moves": [
+        "Bd7",
+        "Nxd4"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Be3 Bg7 f3 O-O Qd2 Nc6 O-O-O": {
+      "best_moves": [
+        "d5",
+        "Nxd4",
+        "Bd7"
+      ],
+      "note": "Yugoslav Attack - critical main line"
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Be3 Bg7 f3 O-O Qd2 Nc6 O-O-O d5": {
+      "best_moves": [
+        "exd5",
+        "Kb1"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Be3 Bg7 f3 O-O Qd2 Nc6 O-O-O Bd7": {
+      "best_moves": [
+        "Bc4",
+        "Kb1"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Be3 Bg7 f3 O-O Qd2 Nc6 O-O-O Nxd4": {
+      "best_moves": [
+        "Bxd4"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Be3 Bg7 f3 Nc6": {
+      "best_moves": [
+        "Qd2",
+        "Nxc6"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Be2": {
+      "best_moves": [
+        "Bg7"
+      ],
+      "note": "Classical Dragon"
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Be2 Bg7": {
+      "best_moves": [
+        "O-O",
+        "Nb3"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Be2 Bg7 O-O": {
+      "best_moves": [
+        "O-O",
+        "Nc6"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 f3": {
+      "best_moves": [
+        "Bg7"
+      ],
+      "note": "Yugoslav Attack setup"
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Bc4": {
+      "best_moves": [
+        "Bg7"
+      ],
+      "note": "Levenfish Attack"
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Bc4 Bg7": {
+      "best_moves": [
+        "O-O",
+        "Nxc6"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 e6": {
+      "best_moves": [
+        "Be3",
+        "Be2",
+        "g4"
+      ],
+      "note": "Scheveningen Variation"
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 e6 Be3": {
+      "best_moves": [
+        "a6",
+        "Be7",
+        "Nc6"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 e6 Be3 a6": {
+      "best_moves": [
+        "f3",
+        "Be2"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 e6 Be3 Be7": {
+      "best_moves": [
+        "f3",
+        "Be2"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 e6 Be2": {
+      "best_moves": [
+        "Be7",
+        "a6"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 e6 g4": {
+      "best_moves": [
+        "h6",
+        "a6",
+        "Be7"
+      ],
+      "note": "Keres Attack"
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 e6 g4 h6": {
+      "best_moves": [
+        "h3",
+        "g5"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 e6 g4 a6": {
+      "best_moves": [
+        "g5"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 e6 g4 Be7": {
+      "best_moves": [
+        "g5"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 Nc6": {
+      "best_moves": [
+        "Bg5",
+        "Be3",
+        "Be2"
+      ],
+      "note": "Classical Sicilian"
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 Nc6 Bg5": {
+      "best_moves": [
+        "e6",
+        "Bd7",
+        "g6"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 Nc6 Bg5 e6": {
+      "best_moves": [
+        "Qd2",
+        "Be2"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 Nc6 Bg5 e6 Qd2": {
+      "best_moves": [
+        "Be7",
+        "a6"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 Nc6 Bg5 e6 Qd2 Be7": {
+      "best_moves": [
+        "O-O-O",
+        "O-O"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 Nc6 Bg5 e6 Qd2 Be7 O-O-O": {
+      "best_moves": [
+        "O-O",
+        "Nxd4"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 Nc6 Bg5 e6 Qd2 a6": {
+      "best_moves": [
+        "O-O-O"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 Nc6 Bg5 Bd7": {
+      "best_moves": [
+        "Qd2"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 Nc6 Be3": {
+      "best_moves": [
+        "e6",
+        "e5",
+        "g6"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 Nc6 Be2": {
+      "best_moves": [
+        "e6",
+        "e5",
+        "g6"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 a6": {
+      "best_moves": [
+        "Nc3",
+        "c4"
+      ],
+      "note": "Najdorf move order"
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 a6 Nc3": {
+      "best_moves": [
+        "Nf6",
+        "e5",
+        "g6"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 e6": {
+      "best_moves": [
+        "Nc3"
+      ],
+      "note": "Scheveningen move order"
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 e6 Nc3": {
+      "best_moves": [
+        "Nf6",
+        "a6"
+      ]
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 g6": {
+      "best_moves": [
+        "Nc3"
+      ],
+      "note": "Dragon move order"
+    },
+    "e4 c5 Nf3 d6 d4 cxd4 Nxd4 g6 Nc3": {
+      "best_moves": [
+        "Bg7",
+        "Nf6"
+      ]
+    },
+    "e4 c5 Nf3 Nc6": {
+      "best_moves": [
+        "d4",
+        "Bb5",
+        "Nc3"
+      ],
+      "variations": {
+        "d4": "Open Sicilian continuation",
+        "Bb5": "Rossolimo Variation",
+        "Nc3": "Closed Sicilian"
+      },
+      "note": "Old Sicilian"
+    },
+    "e4 c5 Nf3 Nc6 d4": {
+      "best_moves": [
+        "cxd4"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4": {
+      "best_moves": [
+        "Nxd4"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4": {
+      "best_moves": [
+        "Nf6",
+        "e6",
+        "g6",
+        "e5"
+      ],
+      "variations": {
+        "Nf6": "Sveshnikov/Kalashnikov",
+        "e6": "Taimanov Variation",
+        "g6": "Accelerated Dragon",
+        "e5": "Pelikan/Sveshnikov"
+      }
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6": {
+      "best_moves": [
+        "Nc3",
+        "Nxc6"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3": {
+      "best_moves": [
+        "e5",
+        "d6",
+        "e6"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 e5": {
+      "best_moves": [
+        "Ndb5",
+        "Nf5",
+        "Nb3"
+      ],
+      "variations": {
+        "Ndb5": "Sveshnikov Main Line",
+        "Nf5": "Lowenthal Variation",
+        "Nb3": "Anti-Sveshnikov"
+      },
+      "note": "Sveshnikov/Pelikan Variation"
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 e5 Ndb5": {
+      "best_moves": [
+        "d6"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 e5 Ndb5 d6": {
+      "best_moves": [
+        "Bg5",
+        "Nd5",
+        "Na3"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 e5 Ndb5 d6 Bg5": {
+      "best_moves": [
+        "a6"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 e5 Ndb5 d6 Bg5 a6": {
+      "best_moves": [
+        "Na3",
+        "Bxf6"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 e5 Ndb5 d6 Bg5 a6 Na3": {
+      "best_moves": [
+        "b5",
+        "Be6"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 e5 Ndb5 d6 Bg5 a6 Na3 b5": {
+      "best_moves": [
+        "Nd5",
+        "Bxf6"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 e5 Ndb5 d6 Bg5 a6 Na3 b5 Nd5": {
+      "best_moves": [
+        "Be7",
+        "Qa5+"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 e5 Ndb5 d6 Bg5 a6 Na3 b5 Bxf6": {
+      "best_moves": [
+        "gxf6"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 e5 Ndb5 d6 Nd5": {
+      "best_moves": [
+        "Nxd5"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 e5 Nf5": {
+      "best_moves": [
+        "d5"
+      ],
+      "note": "Lowenthal Variation"
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 e5 Nb3": {
+      "best_moves": [
+        "Bb4"
+      ],
+      "note": "Anti-Sveshnikov"
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 d6": {
+      "best_moves": [
+        "Bg5",
+        "Be2",
+        "Be3"
+      ],
+      "note": "Classical Sicilian via move order"
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 e6": {
+      "best_moves": [
+        "Nc3",
+        "Nxc6"
+      ],
+      "note": "Taimanov Variation"
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 e6 Nc3": {
+      "best_moves": [
+        "Qc7",
+        "a6",
+        "Nf6"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 e6 Nc3 Qc7": {
+      "best_moves": [
+        "Be3",
+        "Be2"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 e6 Nc3 Qc7 Be3": {
+      "best_moves": [
+        "a6",
+        "Nf6"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 e6 Nc3 a6": {
+      "best_moves": [
+        "Be3",
+        "Be2",
+        "Nxc6"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 e6 Nc3 a6 Be3": {
+      "best_moves": [
+        "Qc7",
+        "Nf6",
+        "b5"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 e6 Nc3 Nf6": {
+      "best_moves": [
+        "Nxc6",
+        "Ndb5"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 g6": {
+      "best_moves": [
+        "Nc3",
+        "c4"
+      ],
+      "note": "Accelerated Dragon"
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 g6 Nc3": {
+      "best_moves": [
+        "Bg7"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 g6 Nc3 Bg7": {
+      "best_moves": [
+        "Be3",
+        "Nxc6",
+        "Nb3"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 g6 Nc3 Bg7 Be3": {
+      "best_moves": [
+        "Nf6",
+        "Nh6"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 g6 Nc3 Bg7 Be3 Nf6": {
+      "best_moves": [
+        "Bc4",
+        "Nb3"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 g6 Nc3 Bg7 Be3 Nf6 Bc4": {
+      "best_moves": [
+        "O-O",
+        "Qa5"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 g6 Nc3 Bg7 Nxc6": {
+      "best_moves": [
+        "bxc6"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 g6 c4": {
+      "best_moves": [
+        "Bg7",
+        "Nf6"
+      ],
+      "note": "Maroczy Bind"
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 g6 c4 Bg7": {
+      "best_moves": [
+        "Be3",
+        "Nc2"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 g6 c4 Nf6": {
+      "best_moves": [
+        "Nc3"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 Bb5": {
+      "best_moves": [
+        "g6",
+        "d6",
+        "e6",
+        "Nd4"
+      ],
+      "variations": {
+        "g6": "Rossolimo Dragon",
+        "d6": "Rossolimo Main",
+        "e6": "Rossolimo French",
+        "Nd4": "Rossolimo Gambit"
+      },
+      "note": "Rossolimo Variation - avoiding main lines"
+    },
+    "e4 c5 Nf3 Nc6 Bb5 g6": {
+      "best_moves": [
+        "O-O",
+        "Bxc6"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 Bb5 g6 O-O": {
+      "best_moves": [
+        "Bg7"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 Bb5 g6 O-O Bg7": {
+      "best_moves": [
+        "Re1",
+        "Bxc6",
+        "c3"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 Bb5 g6 Bxc6": {
+      "best_moves": [
+        "dxc6",
+        "bxc6"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 Bb5 d6": {
+      "best_moves": [
+        "O-O",
+        "Bxc6+"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 Bb5 d6 O-O": {
+      "best_moves": [
+        "Bd7",
+        "Nf6"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 Bb5 d6 Bxc6+": {
+      "best_moves": [
+        "bxc6"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 Bb5 e6": {
+      "best_moves": [
+        "O-O"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 Bb5 e6 O-O": {
+      "best_moves": [
+        "Nge7",
+        "Nf6"
+      ]
+    },
+    "e4 c5 Nf3 Nc6 Bb5 Nd4": {
+      "best_moves": [
+        "Nxd4"
+      ]
+    },
+    "e4 c5 Nf3 e6": {
+      "best_moves": [
+        "d4",
+        "b3",
+        "Nc3"
+      ],
+      "variations": {
+        "d4": "Open Sicilian",
+        "b3": "Snyder Variation",
+        "Nc3": "Closed Sicilian"
+      },
+      "note": "French-Sicilian hybrid"
+    },
+    "e4 c5 Nf3 e6 d4": {
+      "best_moves": [
+        "cxd4"
+      ]
+    },
+    "e4 c5 Nf3 e6 d4 cxd4": {
+      "best_moves": [
+        "Nxd4"
+      ]
+    },
+    "e4 c5 Nf3 e6 d4 cxd4 Nxd4": {
+      "best_moves": [
+        "Nc6",
+        "a6",
+        "Nf6"
+      ]
+    },
+    "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nc6": {
+      "best_moves": [
+        "Nc3",
+        "Nxc6"
+      ]
+    },
+    "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nc6 Nc3": {
+      "best_moves": [
+        "Qc7",
+        "a6",
+        "Nf6"
+      ]
+    },
+    "e4 c5 Nf3 e6 d4 cxd4 Nxd4 a6": {
+      "best_moves": [
+        "Nc3",
+        "Bd3",
+        "c4"
+      ]
+    },
+    "e4 c5 Nf3 e6 d4 cxd4 Nxd4 a6 Nc3": {
+      "best_moves": [
+        "Qc7",
+        "b5",
+        "Nf6"
+      ]
+    },
+    "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nf6": {
+      "best_moves": [
+        "Nc3"
+      ]
+    },
+    "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nf6 Nc3": {
+      "best_moves": [
+        "d6",
+        "Nc6",
+        "Bb4"
+      ]
+    },
+    "e4 c5 Nf3 g6": {
+      "best_moves": [
+        "d4",
+        "c3"
+      ],
+      "note": "Hyperaccelerated Dragon"
+    },
+    "e4 c5 Nf3 g6 d4": {
+      "best_moves": [
+        "cxd4"
+      ]
+    },
+    "e4 c5 Nf3 g6 d4 cxd4": {
+      "best_moves": [
+        "Nxd4"
+      ]
+    },
+    "e4 c5 Nf3 g6 d4 cxd4 Nxd4": {
+      "best_moves": [
+        "Bg7",
+        "Nc6"
+      ]
+    },
+    "e4 c5 Nf3 g6 d4 cxd4 Nxd4 Bg7": {
+      "best_moves": [
+        "Nc3",
+        "c4"
+      ]
+    },
+    "e4 c5 Nf3 g6 d4 cxd4 Nxd4 Bg7 Nc3": {
+      "best_moves": [
+        "Nc6"
+      ]
+    },
+    "e4 c5 Nf3 g6 c3": {
+      "best_moves": [
+        "Bg7"
+      ]
+    },
+    "e4 c5 Nc3": {
+      "best_moves": [
+        "Nc6",
+        "d6",
+        "e6"
+      ],
+      "note": "Closed Sicilian"
+    },
+    "e4 c5 Nc3 Nc6": {
+      "best_moves": [
+        "g3",
+        "Nf3",
+        "Nge2"
+      ]
+    },
+    "e4 c5 Nc3 Nc6 g3": {
+      "best_moves": [
+        "g6",
+        "d6"
+      ]
+    },
+    "e4 c5 Nc3 Nc6 g3 g6": {
+      "best_moves": [
+        "Bg2"
+      ]
+    },
+    "e4 c5 Nc3 Nc6 g3 g6 Bg2": {
+      "best_moves": [
+        "Bg7"
+      ]
+    },
+    "e4 c5 Nc3 Nc6 g3 g6 Bg2 Bg7": {
+      "best_moves": [
+        "d3",
+        "Nge2"
+      ]
+    },
+    "e4 c5 Nc3 Nc6 g3 g6 Bg2 Bg7 d3": {
+      "best_moves": [
+        "d6",
+        "e6"
+      ]
+    },
+    "e4 c5 Nc3 Nc6 g3 g6 Bg2 Bg7 d3 d6": {
+      "best_moves": [
+        "Be3",
+        "Nge2",
+        "f4"
+      ]
+    },
+    "e4 c5 Nc3 Nc6 Nf3": {
+      "best_moves": [
+        "e5",
+        "g6",
+        "d6"
+      ]
+    },
+    "e4 c5 Nc3 Nc6 Nge2": {
+      "best_moves": [
+        "e6",
+        "g6",
+        "d6"
+      ]
+    },
+    "e4 c5 Nc3 d6": {
+      "best_moves": [
+        "g3",
+        "f4"
+      ]
+    },
+    "e4 c5 Nc3 e6": {
+      "best_moves": [
+        "g3",
+        "Nf3"
+      ]
+    },
+    "e4 c5 c3": {
+      "best_moves": [
+        "Nf6",
+        "d5",
+        "e6",
+        "d6"
+      ],
+      "variations": {
+        "Nf6": "Alapin Main",
+        "d5": "Alapin Gambit",
+        "e6": "Alapin French",
+        "d6": "Alapin Najdorf"
+      },
+      "note": "Alapin Variation - solid anti-Sicilian"
+    },
+    "e4 c5 c3 Nf6": {
+      "best_moves": [
+        "e5",
+        "d4"
+      ]
+    },
+    "e4 c5 c3 Nf6 e5": {
+      "best_moves": [
+        "Nd5"
+      ]
+    },
+    "e4 c5 c3 Nf6 e5 Nd5": {
+      "best_moves": [
+        "d4",
+        "Nf3"
+      ]
+    },
+    "e4 c5 c3 Nf6 e5 Nd5 d4": {
+      "best_moves": [
+        "cxd4",
+        "Nc6"
+      ]
+    },
+    "e4 c5 c3 Nf6 e5 Nd5 d4 cxd4": {
+      "best_moves": [
+        "cxd4",
+        "Nf3"
+      ]
+    },
+    "e4 c5 c3 Nf6 e5 Nd5 d4 cxd4 cxd4": {
+      "best_moves": [
+        "d6",
+        "e6"
+      ]
+    },
+    "e4 c5 c3 Nf6 e5 Nd5 d4 cxd4 Nf3": {
+      "best_moves": [
+        "e6",
+        "Nc6"
+      ]
+    },
+    "e4 c5 c3 Nf6 e5 Nd5 Nf3": {
+      "best_moves": [
+        "Nc6",
+        "e6"
+      ]
+    },
+    "e4 c5 c3 d5": {
+      "best_moves": [
+        "exd5",
+        "e5"
+      ]
+    },
+    "e4 c5 c3 d5 exd5": {
+      "best_moves": [
+        "Qxd5"
+      ]
+    },
+    "e4 c5 c3 d5 exd5 Qxd5": {
+      "best_moves": [
+        "d4"
+      ]
+    },
+    "e4 c5 c3 d5 exd5 Qxd5 d4": {
+      "best_moves": [
+        "Nf6",
+        "e6",
+        "cxd4"
+      ]
+    },
+    "e4 c5 c3 d5 e5": {
+      "best_moves": [
+        "Nc6",
+        "Bf5"
+      ]
+    },
+    "e4 c5 c3 e6": {
+      "best_moves": [
+        "d4",
+        "Nf3"
+      ]
+    },
+    "e4 c5 c3 e6 d4": {
+      "best_moves": [
+        "d5",
+        "cxd4"
+      ]
+    },
+    "e4 c5 c3 d6": {
+      "best_moves": [
+        "d4"
+      ]
+    },
+    "e4 c5 c3 d6 d4": {
+      "best_moves": [
+        "Nf6",
+        "cxd4"
+      ]
+    },
+    "e4 c5 d4": {
+      "best_moves": [
+        "cxd4"
+      ],
+      "note": "Smith-Morra Gambit"
+    },
+    "e4 c5 d4 cxd4": {
+      "best_moves": [
+        "c3"
+      ]
+    },
+    "e4 c5 d4 cxd4 c3": {
+      "best_moves": [
+        "dxc3",
+        "Nf6",
+        "d3"
+      ],
+      "variations": {
+        "dxc3": "Smith-Morra Accepted",
+        "Nf6": "Smith-Morra Declined",
+        "d3": "Smith-Morra Defense"
+      }
+    },
+    "e4 c5 d4 cxd4 c3 dxc3": {
+      "best_moves": [
+        "Nxc3"
+      ]
+    },
+    "e4 c5 d4 cxd4 c3 dxc3 Nxc3": {
+      "best_moves": [
+        "Nc6",
+        "e6",
+        "d6"
+      ]
+    },
+    "e4 c5 d4 cxd4 c3 dxc3 Nxc3 Nc6": {
+      "best_moves": [
+        "Nf3",
+        "Bc4"
+      ]
+    },
+    "e4 c5 d4 cxd4 c3 dxc3 Nxc3 Nc6 Nf3": {
+      "best_moves": [
+        "d6",
+        "e6"
+      ]
+    },
+    "e4 c5 d4 cxd4 c3 dxc3 Nxc3 Nc6 Bc4": {
+      "best_moves": [
+        "e6",
+        "d6"
+      ]
+    },
+    "e4 c5 d4 cxd4 c3 Nf6": {
+      "best_moves": [
+        "e5"
+      ]
+    },
+    "e4 c5 d4 cxd4 c3 Nf6 e5": {
+      "best_moves": [
+        "Nd5"
+      ]
+    },
+    "e4 c5 b3": {
+      "best_moves": [
+        "Nf6",
+        "d5",
+        "Nc6"
+      ],
+      "note": "Snyder Variation"
+    },
+    "e4 c5 b4": {
+      "best_moves": [
+        "cxb4"
+      ],
+      "note": "Wing Gambit"
+    },
+    "e4 c5 b4 cxb4": {
+      "best_moves": [
+        "a3",
+        "d4"
+      ]
+    },
+    "e4 c5 f4": {
+      "best_moves": [
+        "d5",
+        "Nc6",
+        "e6"
+      ],
+      "note": "Grand Prix Attack"
+    },
+    "e4 c5 f4 d5": {
+      "best_moves": [
+        "exd5"
+      ]
+    },
+    "e4 c5 f4 Nc6": {
+      "best_moves": [
+        "Nf3"
+      ]
+    },
+    "e4 c5 f4 Nc6 Nf3": {
+      "best_moves": [
+        "g6",
+        "e6"
+      ]
+    },
+    "e4 c5 f4 g6": {
+      "best_moves": [
+        "Nf3"
+      ]
+    },
+    "e4 c5 Bc4": {
+      "best_moves": [
+        "e6",
+        "Nc6",
+        "d6"
+      ],
+      "note": "Bowdler Attack"
+    },
+    "e4 c5 g3": {
+      "best_moves": [
+        "Nc6",
+        "d5",
+        "g6"
+      ],
+      "note": "Fianchetto Variation"
+    },
+    "e4 c5 Nf3 Nf6": {
+      "best_moves": [
+        "e5",
+        "Nc3"
+      ],
+      "note": "Nimzowitsch Variation"
+    },
+    "e4 c5 Nf3 Nf6 e5": {
+      "best_moves": [
+        "Nd5"
+      ]
+    },
+    "e4 c5 Nf3 Nf6 e5 Nd5": {
+      "best_moves": [
+        "Nc3",
+        "d4"
+      ]
+    },
+    "e4 c5 Nf3 Nf6 Nc3": {
+      "best_moves": [
+        "d5",
+        "Nc6"
+      ]
+    },
+    "e4 c5 Nf3 a6": {
+      "best_moves": [
+        "c3",
+        "d4"
+      ],
+      "note": "O'Kelly Variation"
+    },
+    "e4 c5 Nf3 a6 c3": {
+      "best_moves": [
+        "d5",
+        "Nf6"
+      ]
+    },
+    "e4 c5 Nf3 b6": {
+      "best_moves": [
+        "d4",
+        "c3"
+      ],
+      "note": "Snyder Variation"
+    },
+    "e4 c5 Nf3 Qa5": {
+      "best_moves": [
+        "Nc3",
+        "c3"
+      ],
+      "note": "Unusual early queen"
+    }
+  }
+}

@@ -1,0 +1,396 @@
+{
+  "opening_name": "Ruy Lopez",
+  "eco_code": "C60-C99",
+  "description": "One of the oldest and most classical openings, named after Spanish priest Ruy López de Segura. White develops the bishop to attack the knight defending e5.",
+  "main_line": "1.e4 e5 2.Nf3 Nc6 3.Bb5",
+  
+  "book": {
+    "start": {
+      "best_moves": ["e4"]
+    },
+    
+    "e4": {
+      "best_moves": ["e5"]
+    },
+    
+    "e4 e5": {
+      "best_moves": ["Nf3"]
+    },
+    
+    "e4 e5 Nf3": {
+      "best_moves": ["Nc6"]
+    },
+    
+    "e4 e5 Nf3 Nc6": {
+      "best_moves": ["Bb5"],
+      "note": "Ruy Lopez - attacking the defender of e5"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5": {
+      "best_moves": ["a6", "Nf6", "Bc5", "Nd4", "f5"],
+      "variations": {
+        "a6": "Morphy Defense",
+        "Nf6": "Berlin Defense",
+        "Bc5": "Classical Defense",
+        "Nd4": "Bird's Defense",
+        "f5": "Schliemann Defense"
+      }
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6": {
+      "best_moves": ["Ba4", "Bxc6"],
+      "variations": {
+        "Ba4": "Main Line Morphy",
+        "Bxc6": "Exchange Variation"
+      },
+      "note": "Morphy Defense - most popular response"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4": {
+      "best_moves": ["Nf6", "b5", "d6"],
+      "variations": {
+        "Nf6": "Main Morphy Line",
+        "b5": "Archangel Variation",
+        "d6": "Steinitz Defense Deferred"
+      }
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6": {
+      "best_moves": ["O-O", "d3", "Qe2"],
+      "variations": {
+        "O-O": "Closed Variation",
+        "d3": "Martinez Variation",
+        "Qe2": "Wormald Attack"
+      }
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O": {
+      "best_moves": ["Be7", "Nxe4", "b5"],
+      "variations": {
+        "Be7": "Closed Ruy Lopez",
+        "Nxe4": "Open Variation",
+        "b5": "Archangel/Neo-Archangel"
+      }
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7": {
+      "best_moves": ["Re1", "d3", "Nc3"],
+      "variations": {
+        "Re1": "Main Closed Line",
+        "d3": "Anderssen Variation",
+        "Nc3": "Paulsen Variation"
+      },
+      "note": "Closed Ruy Lopez - main battleground"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1": {
+      "best_moves": ["b5", "d6", "O-O"],
+      "variations": {
+        "b5": "Main Closed",
+        "d6": "Modern Steinitz",
+        "O-O": "Delayed Steinitz"
+      }
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5": {
+      "best_moves": ["Bb3"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3": {
+      "best_moves": ["O-O", "d6"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 O-O": {
+      "best_moves": ["c3", "d3", "h3"],
+      "variations": {
+        "c3": "Closed Main Line",
+        "d3": "Pilnik Variation",
+        "h3": "Smyslov Variation"
+      }
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 O-O c3": {
+      "best_moves": ["d6", "d5"],
+      "variations": {
+        "d6": "Chigorin Defense",
+        "d5": "Marshall Attack"
+      }
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 O-O c3 d6": {
+      "best_moves": ["h3", "d4"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 O-O c3 d6 h3": {
+      "best_moves": ["Na5", "Nb8", "h6"],
+      "variations": {
+        "Na5": "Chigorin Main",
+        "Nb8": "Breyer Defense",
+        "h6": "Smyslov Defense"
+      }
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 O-O c3 d6 h3 Na5": {
+      "best_moves": ["Bc2"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 O-O c3 d6 h3 Na5 Bc2": {
+      "best_moves": ["c5", "c6"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 O-O c3 d6 h3 Na5 Bc2 c5": {
+      "best_moves": ["d4"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 O-O c3 d6 h3 Na5 Bc2 c5 d4": {
+      "best_moves": ["Qc7", "Nc6"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 O-O c3 d6 h3 Nb8": {
+      "best_moves": ["d4"],
+      "note": "Breyer Defense - knight retreats to redeploy"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 O-O c3 d6 h3 Nb8 d4": {
+      "best_moves": ["Nbd7"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 O-O c3 d6 h3 Nb8 d4 Nbd7": {
+      "best_moves": ["Nbd2", "Bc2"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 O-O c3 d5": {
+      "best_moves": ["exd5"],
+      "note": "Marshall Attack - Black sacrifices pawn for attack"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 O-O c3 d5 exd5": {
+      "best_moves": ["Nxd5"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 O-O c3 d5 exd5 Nxd5": {
+      "best_moves": ["Nxe5"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 O-O c3 d5 exd5 Nxd5 Nxe5": {
+      "best_moves": ["Nxe5"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 O-O c3 d5 exd5 Nxd5 Nxe5 Nxe5 Rxe5": {
+      "best_moves": ["Nf6", "c6"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 O-O c3 d5 exd5 Nxd5 Nxe5 Nxe5 Rxe5 Nf6": {
+      "best_moves": ["Re1", "d4"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 d6": {
+      "best_moves": ["c3", "d4"],
+      "note": "Modern Steinitz Defense"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Nxe4": {
+      "best_moves": ["d4", "Re1"],
+      "variations": {
+        "d4": "Open Main Line",
+        "Re1": "Riga Variation"
+      },
+      "note": "Open Variation - Black takes on e4"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Nxe4 d4": {
+      "best_moves": ["b5"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Nxe4 d4 b5": {
+      "best_moves": ["Bb3"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Nxe4 d4 b5 Bb3": {
+      "best_moves": ["d5"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Nxe4 d4 b5 Bb3 d5": {
+      "best_moves": ["dxe5"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Nxe4 d4 b5 Bb3 d5 dxe5": {
+      "best_moves": ["Be6"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Nxe4 d4 b5 Bb3 d5 dxe5 Be6": {
+      "best_moves": ["c3", "Qe2"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Nxe4 Re1": {
+      "best_moves": ["Nc5"],
+      "note": "Riga Variation"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 b5": {
+      "best_moves": ["Bb3"],
+      "note": "Archangel Variation"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 b5 Bb3": {
+      "best_moves": ["Bb7", "Na5"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 b5 Bb3 Bb7": {
+      "best_moves": ["O-O", "d3"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 d6": {
+      "best_moves": ["c3", "O-O"],
+      "note": "Steinitz Defense Deferred"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Bxc6": {
+      "best_moves": ["dxc6"],
+      "note": "Exchange Variation - simplified structure"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Bxc6 dxc6": {
+      "best_moves": ["O-O", "d4", "Nxe5"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Bxc6 dxc6 O-O": {
+      "best_moves": ["Qd6", "f6", "Bg4"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Bxc6 dxc6 d4": {
+      "best_moves": ["exd4"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 a6 Bxc6 dxc6 d4 exd4": {
+      "best_moves": ["Qxd4"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 Nf6": {
+      "best_moves": ["O-O", "d3", "Nc3"],
+      "note": "Berlin Defense - very solid"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 Nf6 O-O": {
+      "best_moves": ["Nxe4", "Bc5", "d6"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 Nf6 O-O Nxe4": {
+      "best_moves": ["d4", "Re1"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 Nf6 O-O Nxe4 d4": {
+      "best_moves": ["Nd6"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 Nf6 O-O Nxe4 d4 Nd6": {
+      "best_moves": ["Bxc6"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 Nf6 O-O Nxe4 d4 Nd6 Bxc6": {
+      "best_moves": ["dxc6"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 Nf6 O-O Nxe4 d4 Nd6 Bxc6 dxc6": {
+      "best_moves": ["dxe5"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 Nf6 O-O Nxe4 d4 Nd6 Bxc6 dxc6 dxe5": {
+      "best_moves": ["Nf5", "Nb7"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 Nf6 O-O Nxe4 d4 Nd6 Bxc6 dxc6 dxe5 Nf5": {
+      "best_moves": ["Qxd8+"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 Nf6 O-O Nxe4 d4 Nd6 Bxc6 dxc6 dxe5 Nf5 Qxd8+": {
+      "best_moves": ["Kxd8"],
+      "note": "Berlin Endgame - very drawish but complex"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 Bc5": {
+      "best_moves": ["c3", "Nxe5", "O-O"],
+      "note": "Classical Defense"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 Bc5 c3": {
+      "best_moves": ["Nf6", "f5", "Qe7"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 Bc5 c3 Nf6": {
+      "best_moves": ["O-O", "d4"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 Bc5 O-O": {
+      "best_moves": ["Nd4", "Nf6"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 Nd4": {
+      "best_moves": ["Nxd4", "Bc4"],
+      "note": "Bird's Defense - uncommon"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 Nd4 Nxd4": {
+      "best_moves": ["exd4"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 Nd4 Bc4": {
+      "best_moves": ["Nxf3+"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 f5": {
+      "best_moves": ["Nc3", "d4"],
+      "note": "Schliemann Defense - aggressive"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 f5 Nc3": {
+      "best_moves": ["fxe4", "Nf6"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 f5 d4": {
+      "best_moves": ["fxe4"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 f5 d4 fxe4": {
+      "best_moves": ["Nxe5"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 d6": {
+      "best_moves": ["d4", "O-O"],
+      "note": "Old Steinitz Defense"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 d6 d4": {
+      "best_moves": ["Bd7", "exd4"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 d6 d4 Bd7": {
+      "best_moves": ["Nc3", "O-O"]
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 g6": {
+      "best_moves": ["c3", "d4"],
+      "note": "Smyslov Variation"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 Qe7": {
+      "best_moves": ["O-O"],
+      "note": "Cozio Defense"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 Qf6": {
+      "best_moves": ["Nc3", "O-O"],
+      "note": "Unusual defense"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 Bd6": {
+      "best_moves": ["d4", "O-O"],
+      "note": "Retreat Variation"
+    },
+    
+    "e4 e5 Nf3 Nc6 Bb5 Nge7": {
+      "best_moves": ["Nc3", "O-O"],
+      "note": "Cozio Defense proper"
+    }
+  }
+}
