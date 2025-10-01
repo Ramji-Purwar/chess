@@ -9,9 +9,8 @@ class BoardRepresentation:
 		self.black_left_rook_moved = False
 		self.black_right_rook_moved = False
 
-		# En passant tracking
-		self.en_passant_target = None  # Position where en passant capture can occur
-		self.en_passant_pawn = None    # Position of the pawn that can be captured
+		self.en_passant_target = None 
+		self.en_passant_pawn = None  
 
 		self.position_white_king = [60]
 		self.position_white_queen = [59]
