@@ -1,8 +1,3 @@
-"""
-Best Move Engine for Chess
-Finds the best move using minimax algorithm with alpha-beta pruning
-"""
-
 from board import BoardRepresentation
 from valid_move import MoveValidator
 from eval import evaluate_position
