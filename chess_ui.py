@@ -39,7 +39,7 @@ class ChessUI:
 		self.show_mode_selection = True
 		self.computer_is_white = False
 		self.computer_is_black = False
-		self.ai_engine = BestMoveEngine(depth=3)
+		self.ai_engine = BestMoveEngine(depth=3, use_opening_book=True)
 		self.computer_thinking = False
 		self.computer_move_thread = None
 		
