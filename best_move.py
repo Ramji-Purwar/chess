@@ -204,7 +204,27 @@ class BestMoveEngine:
         
         for from_pos, to_pos in all_moves:
             temp_board = copy.deepcopy(board)
-            temp_board.make_move(from_pos, to_pos)
+            
+            # Check if this is a castling move and handle it properly
+            piece = temp_board.board[from_pos]
+            is_castling_move = False
+            if piece == 'K' and from_pos == 60:  # White king
+                if to_pos == 62:  # Kingside castling
+                    temp_board.make_castling_move(60, 62, 63, 61)
+                    is_castling_move = True
+                elif to_pos == 58:  # Queenside castling
+                    temp_board.make_castling_move(60, 58, 56, 59)
+                    is_castling_move = True
+            elif piece == 'k' and from_pos == 4:  # Black king
+                if to_pos == 6:  # Kingside castling
+                    temp_board.make_castling_move(4, 6, 7, 5)
+                    is_castling_move = True
+                elif to_pos == 2:  # Queenside castling
+                    temp_board.make_castling_move(4, 2, 0, 3)
+                    is_castling_move = True
+            
+            if not is_castling_move:
+                temp_board.make_move(from_pos, to_pos)
             
             score = self._minimax(temp_board, self.depth - 1, not is_white_turn, 
                                  float('-inf'), float('inf'))
@@ -227,19 +247,44 @@ class BestMoveEngine:
         
         if depth == 0:
             board_string = self._board_to_string(board)
-            return evaluate_position(board_string, is_white_turn)
+            # Always evaluate from white's perspective and negate for black
+            score = evaluate_position(board_string, True)
+            return score if is_white_turn else -score
         
         all_moves = self._get_all_moves(board, is_white_turn)
         
         if not all_moves:
             board_string = self._board_to_string(board)
-            return evaluate_position(board_string, is_white_turn)
+            # Always evaluate from white's perspective and negate for black
+            score = evaluate_position(board_string, True)
+            return score if is_white_turn else -score
         
         if is_white_turn:
             max_eval = float('-inf')
             for from_pos, to_pos in all_moves:
                 temp_board = copy.deepcopy(board)
-                temp_board.make_move(from_pos, to_pos)
+                
+                # Check if this is a castling move and handle it properly
+                piece = temp_board.board[from_pos]
+                is_castling_move = False
+                if piece == 'K' and from_pos == 60:  # White king
+                    if to_pos == 62:  # Kingside castling
+                        temp_board.make_castling_move(60, 62, 63, 61)
+                        is_castling_move = True
+                    elif to_pos == 58:  # Queenside castling
+                        temp_board.make_castling_move(60, 58, 56, 59)
+                        is_castling_move = True
+                elif piece == 'k' and from_pos == 4:  # Black king
+                    if to_pos == 6:  # Kingside castling
+                        temp_board.make_castling_move(4, 6, 7, 5)
+                        is_castling_move = True
+                    elif to_pos == 2:  # Queenside castling
+                        temp_board.make_castling_move(4, 2, 0, 3)
+                        is_castling_move = True
+                
+                if not is_castling_move:
+                    temp_board.make_move(from_pos, to_pos)
+                
                 eval_score = self._minimax(temp_board, depth - 1, False, alpha, beta)
                 max_eval = max(max_eval, eval_score)
                 alpha = max(alpha, eval_score)
@@ -251,11 +296,29 @@ class BestMoveEngine:
         else:
             min_eval = float('inf')
             for from_pos, to_pos in all_moves:
-
                 temp_board = copy.deepcopy(board)
-                temp_board.make_move(from_pos, to_pos)
+                
+                # Check if this is a castling move and handle it properly
+                piece = temp_board.board[from_pos]
+                is_castling_move = False
+                if piece == 'K' and from_pos == 60:  # White king
+                    if to_pos == 62:  # Kingside castling
+                        temp_board.make_castling_move(60, 62, 63, 61)
+                        is_castling_move = True
+                    elif to_pos == 58:  # Queenside castling
+                        temp_board.make_castling_move(60, 58, 56, 59)
+                        is_castling_move = True
+                elif piece == 'k' and from_pos == 4:  # Black king
+                    if to_pos == 6:  # Kingside castling
+                        temp_board.make_castling_move(4, 6, 7, 5)
+                        is_castling_move = True
+                    elif to_pos == 2:  # Queenside castling
+                        temp_board.make_castling_move(4, 2, 0, 3)
+                        is_castling_move = True
+                
+                if not is_castling_move:
+                    temp_board.make_move(from_pos, to_pos)
 
-                eval_score = self._minimax(temp_board, depth - 1, True, alpha, beta)
                 eval_score = self._minimax(temp_board, depth - 1, True, alpha, beta)
                 min_eval = min(min_eval, eval_score)
                 beta = min(beta, eval_score)

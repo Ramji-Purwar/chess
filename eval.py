@@ -1170,17 +1170,17 @@ def evaluate_position(board_string, white_turn):
             tempo_score += 10
         if board[0][5] == 'b':  # Bishop on f8
             tempo_score += 10
-        
-        # Bonus for castling
-        if white_king_pos:
-            kr, kf = white_king_pos
-            if kr == 7 and (kf <= 2 or kf >= 6):  # Likely castled
-                tempo_score += 25
-        
-        if black_king_pos:
-            kr, kf = black_king_pos
-            if kr == 0 and (kf <= 2 or kf >= 6):  # Likely castled
-                tempo_score -= 25
+    
+    # Bonus for castling (apply regardless of game phase - castling is always good for king safety)
+    if white_king_pos:
+        kr, kf = white_king_pos
+        if kr == 7 and (kf <= 2 or kf >= 6):  # Likely castled
+            tempo_score += 200  # Strong bonus for king safety
+    
+    if black_king_pos:
+        kr, kf = black_king_pos
+        if kr == 0 and (kf <= 2 or kf >= 6):  # Likely castled
+            tempo_score -= 200  # Strong bonus for king safety
     
     # ENHANCED CENTER CONTROL
     center_squares = [(3, 3), (3, 4), (4, 3), (4, 4)]
