@@ -1,62 +1,80 @@
-# Chess (Python + Pygame)
+# Chess Engine
 
-A simple chess game built in **Python** with a **Pygame** UI. It supports playing chess with move validation and includes logic to compute a **best move** for the current position.
+- **AI Elo**: Currently ~1700 Elo (*tested against Chess.com engine).
 
----
-
-## Features
-
-- Interactive **Pygame** chess UI
-- Board representation + piece positions
-- **Move validation**
-- **Position evaluation**
-- **Best-move search** (engine-style move selection)
-- Game notation logging to a text file
+## Tech Stack
+- **Language**: C++17
+- **GUI Library**: SFML (Simple and Fast Multimedia Library)
 
 ---
 
-## Project Structure
+## File Structure
 
-- `main.py` — Entry point; starts the game
-- `chess_ui.py` — UI layer; handles user input/moves and calls best-move logic
-- `board.py` — Board representation and piece positions
-- `best_move.py` — Finds the best move for the current position (uses evaluation + move generation)
-- `eval.py` — Returns an integer evaluation of the current position
-- `valid_move.py` — Move validation utilities
-- `check_detector.py` — Detects check conditions
-- `mate_detector.py` — Detects checkmate conditions
-- `three_repetition.py` — Threefold repetition detection
-- `fifty_move_check.py` — Fifty-move rule detection
-- `notation_convert.py` — Converts moves to/from chess notation formats
-- `find_opening_move.py` — Opening-related move selection (if applicable)
-- `game.txt` — Stores the game played so far (notation + string form)
-- `images/` — Assets used by the UI (pieces/board images)
-- `opening/`, `moves/` — Data folders used by the engine/opening logic
-
----
-
-## Requirements
-
-- Python 3.x
-- `pygame`
-
-## How to Run
-
-From the repository root:
-
-```bash
-python main.py
+```text
+├── assets/
+│   └── pieces/            # Graphical PNG assets for chess pieces (wp, bp, wk, etc.)
+├── src/
+│   ├── main.cpp           # Program entry point
+│   ├── engine/            # Chess rule validation and game loop
+│   │   ├── ai/
+│   │   │   ├── ai_board   # AI internal board representation & evaluation
+│   │   │   └── ai_engine  # AI search & heuristic algorithms
+│   │   ├── board      # Board state, moves, castling, en passant, signatures
+│   │   ├── game       # Main game state manager, threads, draw logic
+│   │   ├── move       # Move structure
+│   │   ├── move_generator # Legal move generators
+│   │   └── piece      # Piece types and colors
+│   └── gui/               # Rendering and user input
+│       ├── input_handler  # Mouse coordinate to square conversion
+│       └── renderer       # SFML rendering functions for board, pieces, overlays
+└── README.md              # This documentation file
 ```
 
-This will open the Pygame window and start the chess UI.
+---
+
+## Prerequisites
+
+To build the game, you need the SFML development library installed on your system.
+
+### Windows (MSYS2 MinGW-w64)
+Run the following command in the MSYS2 terminal:
+```bash
+pacman -S mingw-w64-x86_64-sfml
+```
+
+### macOS (Homebrew)
+Run the following command:
+```bash
+brew install sfml
+```
+
+### Linux (Ubuntu/Debian)
+Run the following command:
+```bash
+sudo apt-get install libsfml-dev
+```
 
 ---
 
-## How the “Best Move” Works
+## Compilation
 
-The engine flow is roughly:
+You can compile the project using standard G++ command line arguments.
 
-1. Generate / validate legal moves
-2. Evaluate resulting positions (`eval.py`)
-3. Choose the best scoring move (`best_move.py`)
-4. UI applies the move and continues (`chess_ui.py`)
+### Windows (MSYS2 MinGW-w64)
+Run the following command from the project root directory:
+```powershell
+C:\msys64\mingw64\bin\g++.exe -std=c++17 src/main.cpp src/gui/input_handler.cpp src/gui/renderer.cpp src/engine/board.cpp src/engine/game.cpp src/engine/piece.cpp src/engine/move_generator.cpp src/engine/ai/ai_board.cpp src/engine/ai/ai_engine.cpp -o chess.exe -lsfml-graphics -lsfml-window -lsfml-system
+```
+
+---
+
+## How to Play
+
+1. Run the compiled executable:
+   ```bash
+   ./chess.exe
+   ```
+2. **Main Menu**: Choose your opponent mode using the mouse or shortcuts `1`, `2`, or `3` on your keyboard.
+3. **Game Over**:
+   - Click **Play Again (R)** or press `R` to restart in the same mode.
+   - Click **Main Menu (M)** or press `M` to go back to the menu screen.
