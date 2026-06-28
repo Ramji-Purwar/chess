@@ -1,6 +1,6 @@
 # Chess Engine
 
-- **AI Elo**: Currently ~1700 Elo (*tested against Chess.com engine).
+- Currently ~**1700 Elo** (*Benchmarked against Chess.com engine).
 
 ## Tech Stack
 - **Language**: C++17
